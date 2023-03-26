@@ -1,0 +1,40 @@
+/* Modile phones */
+body {
+    background-color: tan;
+  }
+
+.container {
+  width: 100%;
+  text-align: center;
+
+}
+
+.phone {
+  display: block;
+}
+  
+/* Desktop */
+  @media only screen and (min-width: 768px) {
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: olive;
+    }
+
+    .container {
+      border: 1px solid black;
+      width: 1170px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .phone {
+      display: none;
+    }
+  }
+  
