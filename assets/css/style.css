@@ -12,6 +12,14 @@ header > h1 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+h4 {
+  margin: 20px 0;
+}
+
+span {
+  font-size: smaller;
+}
+
 .photo {
   width: 150px;
   height: 150px;
@@ -97,7 +105,6 @@ footer {
 .collapsible::before {
   content: '+';
   position: absolute;
-  /* transform: rotate(90deg); */
   font-weight: bold;
   right: 20px;
 }
@@ -134,6 +141,10 @@ footer {
 }
 .experience-content {
   display: none;
+}
+
+.experience-content ul {
+  margin-top: 10px;
 }
 
 .experience-content.active {
