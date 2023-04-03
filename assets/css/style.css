@@ -317,7 +317,6 @@ footer {
     grid-template-columns: 1fr 2fr;
     max-width: 1170px;
     min-width: 770px;
-    height: 100vh;
     margin: 0 auto;
     margin-top: 50px;
    }
