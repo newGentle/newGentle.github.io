@@ -1,0 +1,89 @@
+/*! react */
+
+/*! ./Home.module.css */
+
+/*! ./CV.module.css */
+
+/*! @mui/icons-material/Facebook */
+
+/*! ./App.css */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../public/locales/ru/translation.json */
+
+/*! react/jsx-runtime */
+
+/*! react-dom/client */
+
+/*! react */
+
+/*! @mui/icons-material/MailOutline */
+
+/*! react-i18next */
+
+/*! react */
+
+/*! ../public/locales/en/translation.json */
+
+/*! @reduxjs/toolkit */
+
+/*! ../Navbar/Navbar */
+
+/*! @reduxjs/toolkit */
+
+/*! ../CV/CV */
+
+/*! ./i18n */
+
+/*! react-spring */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ./App */
+
+/*! ./store/store */
+
+/*! react */
+
+/*! ./Navbar.module.css */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! ./slicer */
+
+/*! react/jsx-runtime */
+
+/*! @mui/icons-material/Phone */
+
+/*! ../Home/Home */
+
+/*! ./components/Main/Main */
+
+/*! ../Experience/Experience */
+
+/*! i18next */
+
+/*! ../public/locales/uz/translation.json */
+
+/*! react/jsx-runtime */
+
+/*! @mui/icons-material/LinkedIn */
+
+/*! react-i18next */
+
+/*! react-redux */
+
+/*! react/jsx-runtime */
+
+/*! ./Main.module.css */
+
+/*! react/jsx-runtime */
+
+/*! @mui/icons-material/Telegram */
