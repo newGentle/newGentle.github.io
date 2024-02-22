@@ -1,6 +1,11 @@
 {
-    "about": "Men haqqimda",
-    "experience": "O`qituvchilik faoliyatim",
-    "skills": "Kasbiy (professional) faoliyatim",
-    "works": "Biznes faoliyatim"
+    "about": "Men",
+    "skills": "Ko'nikmalar",
+    "education": "Ta'lim",
+    "expertise": "Ekspertlik",
+    "teaching": "O'qituvchilik",
+    "cv": "CV",
+    "shavkat jabborov": "SHAVKAT JABBOROV",
+    "Teacher in Business Disciplines": "biznes fanlari bo'yicha o'qituvchi",
+    "All rights reserved.": "Barcha huquqlar himoyalangan."
 }

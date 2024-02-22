@@ -1,0 +1,115 @@
+/*! ./Main.module.css */
+
+/*! @mui/icons-material/LinkedIn */
+
+/*! react-spring */
+
+/*! ../public/locales/ru/translation.json */
+
+/*! @mui/icons-material/Telegram */
+
+/*! react-dom/client */
+
+/*! ./App.css */
+
+/*! ../Navbar/Navbar */
+
+/*! ../Teaching/Teaching */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! @mui/icons-material/Facebook */
+
+/*! ./i18n */
+
+/*! ./About.module.css */
+
+/*! ./App */
+
+/*! react/jsx-runtime */
+
+/*! react-i18next */
+
+/*! ./Skills.module.css */
+
+/*! react/jsx-runtime */
+
+/*! react/jsx-runtime */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ../Expertise/Expertise */
+
+/*! ./Education.module.css */
+
+/*! ../CV/CV */
+
+/*! @mui/icons-material/MailOutline */
+
+/*! ../../assets/images/kdi.png */
+
+/*! react */
+
+/*! ../public/locales/uz/translation.json */
+
+/*! react/jsx-runtime */
+
+/*! ./components/Main/Main */
+
+/*! ./Navbar.module.css */
+
+/*! react/jsx-runtime */
+
+/*! ../About/About */
+
+/*! react */
+
+/*! @mui/icons-material/Phone */
+
+/*! react */
+
+/*! ./CV.module.css */
+
+/*! ../public/locales/en/translation.json */
+
+/*! ../Education/Education */
+
+/*! ../Skills/Skills */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ../../assets/images/-kiut.png */
+
+/*! ../../assets/images/afu.png */
+
+/*! react-i18next */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/-tiue.png */
+
+/*! ../../assets/images/-terdu.png */
+
+/*! i18next */
+
+/*! react */
+
+/*! ./Teaching.module.css */
+
+/*! react/jsx-runtime */
+
+/*! react-i18next */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! react */
