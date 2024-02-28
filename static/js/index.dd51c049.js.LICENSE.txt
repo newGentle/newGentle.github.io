@@ -1,0 +1,153 @@
+/*! react */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! react/jsx-runtime */
+
+/*! ../Teaching/Teaching */
+
+/*! ../Education/Education */
+
+/*! react */
+
+/*! react-spring */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! react/jsx-runtime */
+
+/*! ./Expertise.module.css */
+
+/*! ./Translation.module.css */
+
+/*! ./components/Main/Main */
+
+/*! ./i18n */
+
+/*! @mui/icons-material/LinkedIn */
+
+/*! ./App */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! react */
+
+/*! ../../assets/images/mdis-tash.png */
+
+/*! react/jsx-runtime */
+
+/*! ./Teaching.module.css */
+
+/*! ./Skills.module.css */
+
+/*! @mui/icons-material/Phone */
+
+/*! ./CV.module.css */
+
+/*! ./Education.module.css */
+
+/*! ./Socials.module.css */
+
+/*! ../public/locales/uz/translation.json */
+
+/*! ../public/locales/ru/translation.json */
+
+/*! @mui/icons-material/MailOutline */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../public/locales/en/translation.json */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/mdis.png */
+
+/*! ../../assets/images/-terdu.png */
+
+/*! ../../assets/images/-tiue.png */
+
+/*! @mui/material */
+
+/*! ../About/About */
+
+/*! ../../assets/images/cognos.png */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! react-dom/client */
+
+/*! react-i18next */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! react/jsx-runtime */
+
+/*! @mui/icons-material/Telegram */
+
+/*! react */
+
+/*! ./App.css */
+
+/*! react/jsx-runtime */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! react-i18next */
+
+/*! ../CV/CV */
+
+/*! ../../assets/images/-kiut.png */
+
+/*! ./About.module.css */
+
+/*! ../../assets/images/kdi.png */
+
+/*! @mui/icons-material/Menu */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! react-i18next */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ./Main.module.css */
+
+/*! react-i18next */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! ../Socials/Socials */
+
+/*! ../Skills/Skills */
+
+/*! ../Navbar/Navbar */
+
+/*! ../Translation/Translation */
+
+/*! ./Navbar.module.css */
+
+/*! ../Expertise/Expertise */
+
+/*! @mui/icons-material/Facebook */
+
+/*! i18next */
+
+/*! ../../assets/images/afu.png */
