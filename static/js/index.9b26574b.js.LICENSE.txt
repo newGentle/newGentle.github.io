@@ -1,0 +1,153 @@
+/*! react */
+
+/*! react-dom/client */
+
+/*! react/jsx-runtime */
+
+/*! react-i18next */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! @mui/icons-material/Telegram */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! react-i18next */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ../CV/CV */
+
+/*! ../../assets/images/-kiut.png */
+
+/*! @mui/icons-material/Menu */
+
+/*! ./components/Main/Main */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ../../assets/images/mdis-tash.png */
+
+/*! @mui/icons-material/Phone */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ./CV.module.css */
+
+/*! ./Main.module.css */
+
+/*! react-i18next */
+
+/*! ./Education.module.css */
+
+/*! ../Skills/Skills */
+
+/*! ../Socials/Socials */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! ../Navbar/Navbar */
+
+/*! ../Translation/Translation */
+
+/*! @mui/icons-material/MailOutline */
+
+/*! ../../assets/images/mdis.png */
+
+/*! ./Navbar.module.css */
+
+/*! ../Expertise/Expertise */
+
+/*! @mui/icons-material/Facebook */
+
+/*! ../../assets/images/-terdu.png */
+
+/*! i18next */
+
+/*! ../../assets/images/afu.png */
+
+/*! ../../assets/images/cognos.png */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../Teaching/Teaching */
+
+/*! react/jsx-runtime */
+
+/*! ./App.css */
+
+/*! ../Education/Education */
+
+/*! react */
+
+/*! react-spring */
+
+/*! react/jsx-runtime */
+
+/*! ./About.module.css */
+
+/*! ../../assets/images/kdi.png */
+
+/*! ./Expertise.module.css */
+
+/*! ./Translation.module.css */
+
+/*! react-i18next */
+
+/*! ./i18n */
+
+/*! @mui/icons-material/LinkedIn */
+
+/*! ./App */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ./Teaching.module.css */
+
+/*! ./Skills.module.css */
+
+/*! ../public/locales/en/translation.json */
+
+/*! ./Socials.module.css */
+
+/*! ../public/locales/uz/translation.json */
+
+/*! ../public/locales/ru/translation.json */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/-tiue.png */
+
+/*! @mui/material */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ../About/About */
