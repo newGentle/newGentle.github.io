@@ -1,0 +1,199 @@
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/cognos.png */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! ./Translation.module.css */
+
+/*! ./i18n */
+
+/*! ../../assets/docs/MDIS Tashkent 2017.jpg */
+
+/*! ../Thumbnail/Thumbnail */
+
+/*! ../public/locales/uz/translation.json */
+
+/*! react */
+
+/*! @mui/icons-material/LinkedIn */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/-terdu_logo.png */
+
+/*! ./Main.module.css */
+
+/*! ../../assets/images/KDI_logo.png */
+
+/*! ./Teaching.module.css */
+
+/*! ../../assets/docs/Training Certificate - Cognos 1st page - Germany 2008.jpg */
+
+/*! ../../assets/images/khan_logo.png */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/KDI_Diploma.jpeg */
+
+/*! ./About.module.css */
+
+/*! react-i18next */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../Teaching/Teaching */
+
+/*! ../../assets/images/Jumeirah_logo.png */
+
+/*! @mui/material */
+
+/*! ../../assets/images/GUS_logo.png */
+
+/*! @mui/icons-material/Telegram */
+
+/*! react-spring */
+
+/*! ../../assets/images/-kiut.png */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/mdis-tash.png */
+
+/*! ../../assets/images/Dedeman_logo.png */
+
+/*! @mui/icons-material/Menu */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/Intercontinental_logo.png */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ../Socials/Socials */
+
+/*! ../../assets/docs/MDIS_Singapore_2017.jpg */
+
+/*! ./components/Main/Main */
+
+/*! ../../assets/images/-terdu.png */
+
+/*! @mui/icons-material/Facebook */
+
+/*! ../About/About */
+
+/*! ../../assets/docs/Training Certificate  - Management Competencies_Germany.jpg */
+
+/*! ../Translation/Translation */
+
+/*! @mui/icons-material/Phone */
+
+/*! ./CV.module.css */
+
+/*! ../CV/CV */
+
+/*! ../../assets/docs/Training Certificate Cognos 2nd page - Germany 2008.jpg */
+
+/*! ./App */
+
+/*! @mui/icons-material/MailOutline */
+
+/*! ../../assets/images/kdi.png */
+
+/*! ../../assets/images/-kiut_logo.png */
+
+/*! ../public/locales/en/translation.json */
+
+/*! ../public/locales/ru/translation.json */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../Skills/Skills */
+
+/*! ../Navbar/Navbar */
+
+/*! ./Socials.module.css */
+
+/*! ./App.css */
+
+/*! ../Expertise/Expertise */
+
+/*! ../../assets/images/MDIS_logo.png */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ../../assets/images/afu_logo.png */
+
+/*! react-dom/client */
+
+/*! ../../assets/images/-tiue.png */
+
+/*! react-i18next */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/-tiue_logo.png */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../Education/Education */
+
+/*! ./Expertise.module.css */
+
+/*! react-i18next */
+
+/*! react-i18next */
+
+/*! ../../assets/images/default_logo.png */
+
+/*! ../../assets/images/inwent.png */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ./Education.module.css */
+
+/*! i18next */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! react */
+
+/*! react-i18next */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/mdis.png */
+
+/*! ../../assets/docs/Diploma - Bachelor.jpg */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ../../assets/images/afu.png */
+
+/*! ./Navbar.module.css */
+
+/*! react */
