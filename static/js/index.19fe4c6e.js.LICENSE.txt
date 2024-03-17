@@ -1,0 +1,251 @@
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/Dedeman_logo.png */
+
+/*! ./Main.module.css */
+
+/*! react-spring */
+
+/*! ../Spinner/Spinner */
+
+/*! ../../assets/docs/Training Certificate - Cognos 1st page - Germany 2008.jpg */
+
+/*! ../Education/Education */
+
+/*! @mui/material */
+
+/*! ./Spinner.module.css */
+
+/*! ./App */
+
+/*! ../../assets/images/KDI_Diploma.jpeg */
+
+/*! ./Expertise.module.css */
+
+/*! @reduxjs/toolkit */
+
+/*! ../../assets/images/Intercontinental_logo.png */
+
+/*! react-i18next */
+
+/*! react-redux */
+
+/*! ../public/locales/en/translation.json */
+
+/*! ./store/Slicer */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../public/locales/ru/translation.json */
+
+/*! ../../assets/images/khan_logo.png */
+
+/*! @mui/icons-material/Menu */
+
+/*! react-redux */
+
+/*! react-i18next */
+
+/*! ./About.module.css */
+
+/*! react */
+
+/*! react-spring */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! react/jsx-runtime */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ../../assets/images/-kiut.png */
+
+/*! react-dom/client */
+
+/*! ../Socials/Socials */
+
+/*! react-i18next */
+
+/*! ../../assets/images/mdis-tash.png */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../Translation/Translation */
+
+/*! ../../assets/images/GUS_logo.png */
+
+/*! ./Translation.module.css */
+
+/*! react-spring */
+
+/*! react-spring */
+
+/*! @mui/icons-material/LinkedIn */
+
+/*! ../../assets/docs/MDIS_Singapore_2017.jpg */
+
+/*! ./CV.module.css */
+
+/*! ../../assets/images/-terdu.png */
+
+/*! ../../assets/docs/Training Certificate  - Management Competencies_Germany.jpg */
+
+/*! react-i18next */
+
+/*! i18next */
+
+/*! ../../assets/docs/Training Certificate Cognos 2nd page - Germany 2008.jpg */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/kdi.png */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! @mui/icons-material/Phone */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ./Slicer */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../Teaching/Teaching */
+
+/*! @mui/icons-material/Telegram */
+
+/*! react */
+
+/*! @mui/icons-material/MailOutline */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/default_logo.png */
+
+/*! react-redux */
+
+/*! ../../store/Slicer */
+
+/*! react-i18next */
+
+/*! ../../assets/images/-kiut_logo.png */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/-tiue.png */
+
+/*! react */
+
+/*! react-i18next */
+
+/*! react/jsx-runtime */
+
+/*! react-spring */
+
+/*! ../public/locales/uz/translation.json */
+
+/*! @mui/material */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! react */
+
+/*! react-redux */
+
+/*! react-redux */
+
+/*! ../../assets/images/MDIS_logo.png */
+
+/*! @mui/icons-material/Facebook */
+
+/*! ../../assets/images/afu_logo.png */
+
+/*! ../../store/Slicer */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ../About/About */
+
+/*! ../../assets/images/-tiue_logo.png */
+
+/*! ./components/Main/Main */
+
+/*! ../../assets/images/-terdu_logo.png */
+
+/*! ../../assets/images/KDI_logo.png */
+
+/*! @reduxjs/toolkit */
+
+/*! ./Navbar.module.css */
+
+/*! ../../assets/images/inwent.png */
+
+/*! ../CV/CV */
+
+/*! ./Education.module.css */
+
+/*! react-i18next */
+
+/*! ./store/store */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! ../../assets/images/mdis.png */
+
+/*! react-redux */
+
+/*! ../../assets/images/afu.png */
+
+/*! ../../assets/docs/Diploma - Bachelor.jpg */
+
+/*! react-redux */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../../assets/images/cognos.png */
+
+/*! ../../assets/images/Jumeirah_logo.png */
+
+/*! ./Socials.module.css */
+
+/*! ../Skills/Skills */
+
+/*! ../Navbar/Navbar */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ../Expertise/Expertise */
+
+/*! ../../assets/docs/MDIS Tashkent 2017.jpg */
+
+/*! react */
+
+/*! ./i18n */
+
+/*! ../Thumbnail/Thumbnail */
+
+/*! ./App.css */
+
+/*! react/jsx-runtime */
+
+/*! ./Teaching.module.css */
+
+/*! react */
