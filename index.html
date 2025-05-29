@@ -4,348 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akbar Abdullaev - Head of IT Department</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            min-height: 100vh;
-        }
-
-        .sidebar {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: #fff;
-            padding: 40px 30px;
-            position: relative;
-        }
-
-        .sidebar::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .profile {
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .profile-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            font-weight: bold;
-            color: #fff;
-            border: 4px solid rgba(255,255,255,0.2);
-        }
-
-        .profile h1 {
-            font-size: 24px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .profile .title {
-            font-size: 16px;
-            color: #bdc3c7;
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding: 10px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: rgba(255,255,255,0.15);
-            transform: translateX(5px);
-        }
-
-        .contact-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 15px;
-            opacity: 0.8;
-        }
-
-        .section {
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .section h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #ecf0f1;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-
-        .skill-item {
-            background: rgba(255,255,255,0.1);
-            padding: 8px 15px;
-            margin: 8px 0;
-            border-radius: 20px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            background: rgba(255,255,255,0.2);
-            transform: scale(1.05);
-        }
-
-        .language-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            padding: 10px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-        }
-
-        .language-level {
-            font-size: 12px;
-            background: #3498db;
-            padding: 4px 8px;
-            border-radius: 15px;
-        }
-
-        .main-content {
-            padding: 40px;
-            background: #fff;
-        }
-
-        .main-header {
-            margin-bottom: 40px;
-        }
-
-        .main-header h2 {
-            font-size: 32px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .main-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
-        }
-
-        .summary {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #555;
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 5px solid #3498db;
-            margin-bottom: 40px;
-        }
-
-        .experience-section h3 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .experience-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
-        }
-
-        .job {
-            margin-bottom: 35px;
-            padding: 25px;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border-left: 4px solid #3498db;
-        }
-
-        .job:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-
-        .job-header {
-            margin-bottom: 15px;
-        }
-
-        .job-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-
-        .company {
-            font-size: 16px;
-            color: #3498db;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .period {
-            font-size: 14px;
-            color: #7f8c8d;
-            font-style: italic;
-        }
-
-        .job-description {
-            margin-top: 15px;
-        }
-
-        .job-description ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .job-description li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-            color: #555;
-        }
-
-        .job-description li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #3498db;
-            font-weight: bold;
-        }
-
-        .education-section {
-            margin-top: 40px;
-        }
-
-        .education-section h3 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .education-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
-        }
-
-        .education-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid #e74c3c;
-        }
-
-        .cert-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            border-left: 4px solid #f39c12;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                padding: 30px 20px;
-            }
-            
-            .main-content {
-                padding: 30px 20px;
-            }
-        }
-
-        @media print {
-            body {
-                background: #fff;
-                padding: 0;
-            }
-            
-            .container {
-                box-shadow: none;
-                border-radius: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
             <div class="profile">
-                <div class="profile-image">AA</div>
+                <div class="profile-image"></div>
                 <h1>Akbar Abdullaev</h1>
                 <div class="title">Head of IT Department</div>
             </div>
@@ -362,7 +27,31 @@
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                     </svg>
-                    abdullaev.akbar@gmail.com
+                    <a href="mailto:abdullaev.akbar@gmail.com" class="contact-link">abdullaev.akbar@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    <a href="https://www.linkedin.com/in/akbar-abdullaev-b7697072/" target="_blank" class="contact-link">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.14 19.018c-1.168.008-2.093-.484-3.096-1.03-1.367.782-2.214.893-3.277.152-.196-.137-.356-.283-.496-.451-.38-.456-.489-.95-.399-1.578.019-.13.039-.254.068-.434a883.14 883.14 0 00-1.306-3.97c-.419-1.145-.679-1.87-.794-2.3-.123-.46-.131-.858-.028-1.195.174-.562.587-.978 1.134-1.14.684-.202 1.51-.03 2.25.572.262.213.505.47.724.766l2.148 2.856c.416-.365.824-.749 1.226-1.15.917-.917 1.525-1.616 1.816-2.094.413-.682.577-1.233.557-1.729-.02-.496-.245-.965-.619-1.31a2.374 2.374 0 00-.361-.27c-.392-.243-.842-.384-1.313-.417-.475-.033-.952.013-1.43.145l-.114.02.013-.238c.025-.46.196-.858.493-1.17.297-.312.687-.499 1.122-.518.471-.02.95.095 1.335.4.385.304.647.714.747 1.19.052.24.064.485.032.725-.076.57-.294 1.13-.657 1.68-.412.624-1.04 1.384-1.882 2.28-.533.567-1.078 1.127-1.635 1.678l-.07.066.076.024c.534.168 1.033.408 1.495.718.472.317.838.71 1.1 1.187.255.463.411.964.462 1.496.048.497.016.995-.101 1.502a3.89 3.89 0 01-.683 1.413c-.613.825-1.501 1.25-2.67 1.282zM8.013 13.8c.15 0 .296.034.431.104.166.086.305.207.417.364.193.27.284.59.268.946-.036.813-.629 1.337-1.779 1.574-.974.201-1.736-.087-2.286-.865-.157-.222-.265-.458-.327-.707-.063-.257-.067-.51-.013-.762.185-.86.777-1.326 1.773-1.403.173-.011.346-.005.517.02.184.026.366.074.547.144.153.057.307.118.462.183l.184.074-.024-.098a2.27 2.27 0 00-.123-.37.86.86 0 01-.044-.137c-.01-.055.004-.083.044-.083z"/>
+                    </svg>
+                    <a href="https://t.me/Newgentle" target="_blank" class="contact-link">Telegram</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <a href="https://wa.me/+998992100935" target="_blank" class="contact-link">WhatsApp</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <a href="https://github.com/newGentle" target="_blank" class="contact-link">GitHub</a>
                 </div>
             </div>
 
@@ -373,7 +62,9 @@
                 <div class="skill-item">Network Administration</div>
                 <div class="skill-item">Windows Server & AD</div>
                 <div class="skill-item">PostgreSQL, SQL</div>
-                <div class="skill-item">Python, C#, JavaScript</div>
+                <div class="skill-item">C#</div>
+                <div class="skill-item">Python (FastAPI, Django, Flask)</div>
+                <div class="skill-item">JavaScript(React)</div>
                 <div class="skill-item">AI-driven Solutions</div>
                 <div class="skill-item">FaceID Systems</div>
                 <div class="skill-item">VoIP Configuration</div>
@@ -396,6 +87,10 @@
                 </div>
                 <div class="language-item">
                     <span>Turkish</span>
+                    <span class="language-level">B1</span>
+                </div>
+                <div class="language-item">
+                    <span>Farsi</span>
                     <span class="language-level">B1</span>
                 </div>
             </div>
@@ -424,7 +119,6 @@
                             <li>Managing a team and overseeing critical infrastructure</li>
                             <li>Developed AI solutions for improving call center response speed</li>
                             <li>Oversaw FaceID implementation for automated attendance tracking</li>
-                            <li>Developed KPI systems to enhance employee morale and performance</li>
                         </ul>
                     </div>
                 </div>
@@ -461,13 +155,58 @@
 
                 <div class="job">
                     <div class="job-header">
-                        <div class="job-title">Freelancer</div>
+                        <div class="job-title">Freelance Web Developer & Database Administrator</div>
                         <div class="company">Self-employed</div>
                         <div class="period">January 2013 - April 2017</div>
                     </div>
                     <div class="job-description">
                         <ul>
+                            <li>Developed responsive websites and web applications using modern frameworks and technologies</li>
+                            <li>Designed and implemented user-friendly interfaces based on client requirements</li>
+                            <li>Administered and maintained relational databases, including performance optimization and data integrity</li>
+                            <li>Collaborated with clients to define project scope, goals, and deliverables</li>
+                            <li>Provided ongoing support, bug fixes, and enhancements for completed projects</li>
+                            <li>Ensured cross-browser compatibility and mobile responsiveness</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">IT Engineer</div>
+                        <div class="company">MONBLAN LLC</div>
+                        <div class="period">October 2012 - January 2013</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Provided IT infrastructure support including OS and hardware maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Freelancer</div>
+                        <div class="company">Self-employed</div>
+                        <div class="period">January 2009 - April 2012</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
                             <li>Provided PC and network repair and installation services</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Technical Director</div>
+                        <div class="company">VIA Karavan Studio</div>
+                        <div class="period">March 2009 - December 2009</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Managed studio equipment and internet services</li>
+                            <li>Supervised recording and data systems</li>
                         </ul>
                     </div>
                 </div>
@@ -485,6 +224,85 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Technical Operator</div>
+                        <div class="company">Zarafshan Trans</div>
+                        <div class="period">January 2007 - April 2007</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Supported PCs and software systems for logistics operations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">IT Specialist</div>
+                        <div class="company">Socio-Economic College</div>
+                        <div class="period">October 2005 - December 2006</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Developed scripts and performed IT maintenance duties</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Technical Operator</div>
+                        <div class="company">Yuldosh Co., Uzbekistan Railways</div>
+                        <div class="period">March 2005 - September 2005</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Maintained hardware and monitored train logistics data systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Volunteer</div>
+                        <div class="company">IATP, IREX USA</div>
+                        <div class="period">November 2004 - March 2005</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Educated users on internet use and PC applications</li>
+                            <li>Upgraded training center technology</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Senior IT Support Specialist</div>
+                        <div class="company">OAZIS Private Firm</div>
+                        <div class="period">January 2000 - October 2000</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Repaired and upgraded computers and peripherals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Engineer, Automatic Systems</div>
+                        <div class="company">Surkhandarya Railway Directorate</div>
+                        <div class="period">October 1999 - January 2000</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Maintained train database systems and reports</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="education-section">
@@ -496,6 +314,9 @@
 
                 <h4 style="margin: 20px 0 15px 0; color: #2c3e50;">Professional Certifications</h4>
                 
+                <div class="cert-item">
+                    <strong>Python Full Stack Web Developer</strong> - SkillFactory, 2023
+                </div>
                 <div class="cert-item">
                     <strong>Website Administration</strong> - LAUR Training Center, 2005
                 </div>
