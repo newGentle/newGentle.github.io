@@ -1,1 +1,515 @@
-<!doctype html><html><head><title>Portfolio</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon-32x32.png"><script defer="defer" src="/static/js/lib-polyfill.7f1abf9a.js"></script><script defer="defer" src="/static/js/lib-react.31c60778.js"></script><script defer="defer" src="/static/js/230.ff9d2ffd.js"></script><script defer="defer" src="/static/js/index.19fe4c6e.js"></script><link href="/static/css/index.ccc18e21.css" rel="stylesheet"></head><body><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akbar Abdullaev - Head of IT Department</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #fff;
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: #fff;
+            border: 4px solid rgba(255,255,255,0.2);
+        }
+
+        .profile h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .profile .title {
+            font-size: 16px;
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            opacity: 0.8;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .skill-item {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            margin: 8px 0;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .language-level {
+            font-size: 12px;
+            background: #3498db;
+            padding: 4px 8px;
+            border-radius: 15px;
+        }
+
+        .main-content {
+            padding: 40px;
+            background: #fff;
+        }
+
+        .main-header {
+            margin-bottom: 40px;
+        }
+
+        .main-header h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .main-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .summary {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 40px;
+        }
+
+        .experience-section h3 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .experience-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .job {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #3498db;
+        }
+
+        .job:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .job-header {
+            margin-bottom: 15px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 16px;
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .period {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .job-description {
+            margin-top: 15px;
+        }
+
+        .job-description ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .job-description li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+        }
+
+        .job-description li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .education-section {
+            margin-top: 40px;
+        }
+
+        .education-section h3 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .education-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .education-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .cert-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #f39c12;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                padding: 30px 20px;
+            }
+            
+            .main-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <div class="profile-image">AA</div>
+                <h1>Akbar Abdullaev</h1>
+                <div class="title">Head of IT Department</div>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    +998 (99) 2100935
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                    abdullaev.akbar@gmail.com
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Key Skills</h3>
+                <div class="skill-item">IT Strategy & Leadership</div>
+                <div class="skill-item">Team Management</div>
+                <div class="skill-item">Network Administration</div>
+                <div class="skill-item">Windows Server & AD</div>
+                <div class="skill-item">PostgreSQL, SQL</div>
+                <div class="skill-item">Python, C#, JavaScript</div>
+                <div class="skill-item">AI-driven Solutions</div>
+                <div class="skill-item">FaceID Systems</div>
+                <div class="skill-item">VoIP Configuration</div>
+                <div class="skill-item">Website Administration</div>
+            </div>
+
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="language-item">
+                    <span>Uzbek</span>
+                    <span class="language-level">Native</span>
+                </div>
+                <div class="language-item">
+                    <span>Russian</span>
+                    <span class="language-level">Fluent</span>
+                </div>
+                <div class="language-item">
+                    <span>English</span>
+                    <span class="language-level">B1</span>
+                </div>
+                <div class="language-item">
+                    <span>Turkish</span>
+                    <span class="language-level">B1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="main-header">
+                <h2>Professional Summary</h2>
+                <div class="summary">
+                    Seasoned Head of IT Department with over 20 years of progressive experience in IT systems, infrastructure, network administration, and team leadership. Specialized in building and optimizing IT operations in medical and private sectors. Proven success in implementing AI-driven solutions, network security, KPI frameworks, and organizational IT strategies that support institutional growth and service efficiency.
+                </div>
+            </div>
+
+            <div class="experience-section">
+                <h3>Professional Experience</h3>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Head of IT Department</div>
+                        <div class="company">AkfaMedline - VohaMedline</div>
+                        <div class="period">April 2024 - Present</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Leading full IT operations in a private medical organization</li>
+                            <li>Managing a team and overseeing critical infrastructure</li>
+                            <li>Developed AI solutions for improving call center response speed</li>
+                            <li>Oversaw FaceID implementation for automated attendance tracking</li>
+                            <li>Developed KPI systems to enhance employee morale and performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">3D Modeler & IT Specialist</div>
+                        <div class="company">PROEKTPRO LLC</div>
+                        <div class="period">August 2019 - March 2024</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Modeled 3D architectural visualizations for clients</li>
+                            <li>Installed and maintained PC workstations and network systems</li>
+                            <li>Performed maintenance of office hardware and peripherals</li>
+                            <li>Optimized internet and LAN connectivity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">IT Specialist</div>
+                        <div class="company">Me'mor Architecture Service</div>
+                        <div class="period">September 2018 - March 2019</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Administered company website and maintained internal networks</li>
+                            <li>Performed routine IT maintenance and support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Freelancer</div>
+                        <div class="company">Self-employed</div>
+                        <div class="period">January 2013 - April 2017</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Provided PC and network repair and installation services</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Technical Director</div>
+                        <div class="company">Alfitextile</div>
+                        <div class="period">April 2007 - January 2009</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Administered databases, servers, and barcode scanning systems</li>
+                            <li>Designed and managed company websites</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-section">
+                <h3>Education & Certifications</h3>
+                
+                <div class="education-item">
+                    <strong>Tashkent Higher Military Border School</strong> (Incomplete) - 2004
+                </div>
+
+                <h4 style="margin: 20px 0 15px 0; color: #2c3e50;">Professional Certifications</h4>
+                
+                <div class="cert-item">
+                    <strong>Website Administration</strong> - LAUR Training Center, 2005
+                </div>
+                <div class="cert-item">
+                    <strong>IBM PC Maintenance</strong> - LAUR Training Center, 2004
+                </div>
+                <div class="cert-item">
+                    <strong>3Ds Max Graphic Design</strong> - LAUR Training Center, 2004
+                </div>
+                <div class="cert-item">
+                    <strong>PC Operator</strong> - Istiqlol Business School, 1999
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
