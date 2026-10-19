@@ -39,17 +39,17 @@
     {
       "value": "20+",
       "label": "years in IT",
-      "detail": "technical & leadership experience"
+      "detail": "Engineering and leadership"
     },
     {
-      "value": "5",
-      "label": "languages · Uzbek, Russian, English, Turkish, Farsi",
-      "detail": "language qualifications"
+      "value": "IT Ops",
+      "label": "Infrastructure and reliability",
+      "detail": "Networks, services, monitoring"
     },
     {
-      "value": "2023",
-      "label": "Python Full Stack training",
-      "detail": "SkillFactory"
+      "value": "Systems",
+      "label": "Integration and automation",
+      "detail": "Architecture and delivery"
     }
   ],
   "section": {
