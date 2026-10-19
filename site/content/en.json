@@ -83,7 +83,7 @@
         "text": "Align stakeholders, set acceptance criteria and guide changes from concept through validation."
       }
     ],
-    "note": "My current industry is healthcare, but the expertise is cross-sector: operating systems, enterprise IT and digital transformation."
+    "note": "Core experience is cross-sector IT leadership, operations, architecture and systems integration."
   },
   "work": {
     "title": "Selected systems, with delivery status.",
@@ -97,110 +97,7 @@
     "coming": "In progress",
     "otherHeading": "Current engineering initiatives"
   },
-  "projects": [
-    {
-      "id": "sayana",
-      "no": "01",
-      "featured": true,
-      "category": "Digital operations · Systems integration",
-      "title": "SAYANA — internal management platform",
-      "status": "Selected modules operational",
-      "statusKind": "operational",
-      "challenge": "Connect administrative workflows, management reporting and financial operations through interoperable services.",
-      "action": "Define product direction and acceptance criteria; coordinate integrations, validation, staged delivery and reporting behavior.",
-      "outcome": "Director reporting and Cash workflows have working deployments. Other modules remain under active development. Financial figures and business records are not disclosed.",
-      "chips": [
-        "Platform architecture",
-        "Reporting",
-        "Workflow design"
-      ],
-      "diagram": [
-        "Business processes",
-        "Data integration",
-        "Management reporting"
-      ]
-    },
-    {
-      "id": "hr",
-      "no": "02",
-      "featured": true,
-      "category": "HR systems · Integration",
-      "title": "Workforce & attendance automation",
-      "status": "In use",
-      "statusKind": "operational",
-      "challenge": "Make workforce records, biometric attendance events, schedules and exception handling work together.",
-      "action": "Coordinate requirements, investigate real incidents and guide controlled updates to HR and attendance workflows.",
-      "outcome": "Operational workflows in use; improvements and edge-case handling continue iteratively.",
-      "chips": [
-        "FaceID",
-        "API integration",
-        "HR workflows"
-      ],
-      "diagram": [
-        "Attendance events",
-        "Business rules",
-        "HR records"
-      ]
-    },
-    {
-      "id": "observability",
-      "no": "03",
-      "featured": true,
-      "category": "Enterprise infrastructure · Reliability",
-      "title": "Network operations & observability",
-      "status": "Operational practice",
-      "statusKind": "operational",
-      "challenge": "Keep multi-system infrastructure diagnosable and reliable while resolving network and service incidents.",
-      "action": "Lead diagnosis across enterprise networking, traffic flows and services; refine Zabbix/Grafana monitoring and actionable telemetry.",
-      "outcome": "Monitoring and incident response are part of ongoing operations. No unverified uptime or reduction metrics are claimed.",
-      "chips": [
-        "Aruba networking",
-        "Zabbix / Grafana",
-        "Incident response"
-      ],
-      "diagram": [
-        "Network & systems",
-        "Metrics / events",
-        "Diagnosis"
-      ]
-    },
-    {
-      "id": "forge",
-      "no": "04",
-      "featured": false,
-      "category": "AI-assisted engineering · Tooling",
-      "title": "ForgeMCP SAYANA",
-      "status": "Controlled pilot",
-      "statusKind": "development",
-      "challenge": "Give development workflows a bounded, auditable bridge to engineering tools.",
-      "action": "Shape architecture, workspace scoping, tests and acceptance checkpoints across successive prototypes.",
-      "outcome": "In development and validation; not a publicly released product.",
-      "chips": [
-        "MCP",
-        "Engineering automation",
-        "Testing"
-      ],
-      "diagram": []
-    },
-    {
-      "id": "mobile",
-      "no": "05",
-      "featured": false,
-      "category": "Product design · Mobile",
-      "title": "Mobile Portal",
-      "status": "In development",
-      "statusKind": "development",
-      "challenge": "Create a mobile-first experience connected to existing services without uncontrolled duplication of sensitive data.",
-      "action": "Specify user flows, review integration contracts and perform UX acceptance in staged iterations.",
-      "outcome": "Development-stage project; production rollout is not claimed.",
-      "chips": [
-        "Mobile UX",
-        "API contracts",
-        "Product scope"
-      ],
-      "diagram": []
-    }
-  ],
+  "projects": [],
   "experience": {
     "title": "From engineering to IT leadership.",
     "summary": "The most recent positions are prioritized; earlier work is retained as a concise timeline.",

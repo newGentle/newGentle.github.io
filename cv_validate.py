@@ -28,6 +28,6 @@ for loc,files in [('en',['index.html','resume/index.html']),('ru',['ru/index.htm
   assert all((path.parent/name).is_file() for name in p.resources),(filename,p.resources)
   assert not any(key in path.read_text(encoding='utf-8') for key in ('10.64.0.','10.65.0.','172.27.228.'))
   print('PASS',filename,'resources',len(p.resources),'anchors',len(p.anchors))
- assert len(data['projects'])==5
+ assert len(data['projects'])==0
  assert all(x['statusKind'] in ('operational','development') for x in data['projects'])
 print('SITE_VALIDATION_PASS')

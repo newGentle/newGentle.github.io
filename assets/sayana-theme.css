@@ -1,0 +1,33 @@
+/* SAYANA v2.2 identity / Neo Executive adaptation for the CV.
+   Source: clinik_report/director_dashboard/react_app/src/brand/sayana-tokens.css */
+:root{--navy:#3E2A1F;--deep:#523F35;--ink:#3E2A1F;--muted:#806D61;--line:#E4D4C8;--teal:#B5523A;--pale:#F8EFE6;--paper:#FCF8F4}
+body{background:#FCF8F4;color:#3E2A1F;font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.site-header{background:rgba(252,248,244,.97);border-bottom-color:#E4D4C8}
+.brand{font-size:16px;color:#3E2A1F}.brand small{font-size:11px;color:#806D61}
+.logo{min-width:215px}
+.nav-actions .cta{background:#B5523A;color:#fff}
+.links a:hover,.nav-actions .lang:hover{color:#9A4835}
+.hero{background:radial-gradient(circle at 87% 18%,rgba(217,160,140,.35),transparent 38%),linear-gradient(118deg,#F8EFE6,#FCF8F4 70%,#F1E5DB);color:#3E2A1F}
+.eyebrow{color:#9A4835}.hero-name{color:#B5523A}
+.hero h1{color:#3E2A1F}.hero h1 em{color:#B5523A}
+.hero-description{color:#675449}.meta-line{color:#806D61}.meta-line span+span:before{color:#B5523A}
+.btn-primary{background:#B5523A;color:#fff}.btn-secondary{border-color:#CDBBAE;color:#3E2A1F}
+.portrait:before{border-color:#D9A08C}.portrait figcaption{color:#806D61}
+.proof{background:#fff;border-color:#E4D4C8;box-shadow:0 16px 40px rgba(62,42,31,.10)}
+.proof-item{border-right-color:#E4D4C8}.proof-item:last-child{border-right-color:transparent}.proof-item:last-child{border-top-color:#E4D4C8}
+.section-soft{background:#F8EFE6}
+.section:not(.section-soft){background:#FCF8F4}
+.kicker{color:#9A4835}.section-intro,.about-text{color:#675449}
+.about-note{border-color:#B5523A;color:#675449}
+.principle,.skill{background:#fff;border-color:#E4D4C8;box-shadow:0 1px 2px rgba(62,42,31,.05),0 8px 24px rgba(62,42,31,.055)}
+.principle .number{color:#B5523A}.principle .label{color:#806D61}.principle p,.skill li{color:#675449}
+.job,.qual-row{border-bottom-color:#E4D4C8}.job-date,.older-row span,.qual-row span,.education{color:#806D61}
+.job ul{color:#675449}.job-spot{background:#F4E2DC;color:#7D3E31}
+.older{border-color:#E4D4C8}.older-row{border-color:#E4D4C8}
+.contact-section{background:#3E2A1F;color:#fff}.contact-grid p,.contact-note{color:#EBCBC1}.contact-links a{border-bottom-color:#806D61}.contact-section .kicker{color:#D9A08C}
+.print-link{background:#B5523A!important;color:#fff!important}
+.footer{background:#2A1D18;color:#E4D4C8}
+.skip{background:#FCF8F4}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:#B5523A}
+@media(max-width:800px){.links{background:#FCF8F4;border-bottom-color:#E4D4C8}}
+@media print{.hero{background:white!important}.hero h1,.hero h1 em,.hero-name{color:#111!important}.hero-description{color:#333!important}}

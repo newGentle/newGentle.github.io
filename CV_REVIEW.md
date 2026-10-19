@@ -1,29 +1,19 @@
 # Executive CV — Draft PR review
 
-**Status:** Candidate for review only. Do not merge or publish without separate explicit approval.
+**DRAFT ONLY — NO MERGE / PUBLICATION**
 
-## Change summary
-- Executive-first positioning: IT leadership, infrastructure, integrations and reliable delivery.
-- EN/RU site generated from `site/content/en.json` and `site/content/ru.json`, using `site/build.py`.
-- Shared responsive styling and lightweight navigation in `assets/site.css` / `assets/site.js`, SVG favicon.
-- Five case studies structured as challenge / personal contribution / outcome or status; three diagrams are explicitly **conceptual**, not application screenshots.
-- Standalone recruiter-oriented HTML CV at `resume/` and `ru/resume/`, designed for print-to-PDF.
-- The existing portrait `photo.webp` is reused.
-- No added third-party scripts, external assets, analytics, internal URLs or production files.
+## Current review scope (SAYANA-brand revision)
+- The header is text-only: removed the AA icon/monogram; the website no longer links to its prior favicon.
+- Selected Projects/Work section and navigation links are removed from EN and RU pages. Project entries are omitted from EN/RU recruiter resumes. Project material remains recoverable from earlier Git history (commit 820eea7).
+- Visual language references approved SAYANA Brand Tokens v2.2 from `newGentle/clinik_report/director_dashboard/react_app/src/brand/sayana-tokens.css`: Terracotta #B5523A, Cream #F8EFE6, Deep Brown #3E2A1F, Rose Clay #D9A08C. Aura Teal #58B8AE remains a secondary brand accent.
+- Layout retains four sections after introduction: Approach, Experience, Expertise, Qualifications and Contacts.
+- EN/RU pages generated using `site/build.py` from `site/content/*.json`; ATS-focused one-column HTML resumes remain available.
 
-## Local validation
-1. `python site/build.py`
-2. `python cv_validate.py` — checks both site languages and both recruiter CVs, local assets, anchors and project statuses.
-3. Desktop browser QA: Chrome 155, EN/RU, viewport widths 1440 / 768 / 390 / 320 pixels: no horizontal overflow or page errors; portrait loads; mobile menu opens.
-4. Both recruiter CV pages rendered as printable PDFs through Chrome.
+## Tests
+`python site/build.py`
+`python cv_validate.py` -> PASS all four pages
+Chrome 155 headless EN/RU at widths 1440, 768, 390 and 320 -> no overflow, no JS errors, loaded portrait and working mobile menu, 0 visible project cards.
+Recruiter resume print-to-PDF has been generated for both languages. Visual PDF pagination, full WCAG and Lighthouse are pending.
 
-## Publication blockers / fact-checking
-- Confirm that the company name and public references to SAYANA / ForgeMCP / FaceID are authorized.
-- Reconfirm project deployment statuses: Director, Cash, attendance, network observability, ForgeMCP and Mobile Portal.
-- Verify public phone/email/LinkedIn, employment dates, language levels and course completions.
-- Collect approved quantitative outcomes (team size, locations, served endpoints, availability, time savings etc.) before advertising any numbers. None have been invented.
-- Conceptual system diagrams intentionally do not depict production screens, infrastructure addresses or real records.
-- Test keyboard focus, screen reader flows, performance metrics and PDF pagination before approving any public release.
-
-## Merge gate
-Production branch: `gh-pages`; the branch must remain unchanged. Do not merge without new user authorization.
+## Publication gate
+Verify employment data, language/education claims, contact information, and permission to mention internal organizations before approving a future deployment. No merge or publication without explicit approval.
