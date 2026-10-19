@@ -28,7 +28,7 @@ def build(d):
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(descr)}"><meta name="theme-color" content="#0b1d2b">
 <link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="en" href="https://newgentle.github.io/"><link rel="alternate" hreflang="ru" href="https://newgentle.github.io/ru/">
-<link rel="stylesheet" href="{pre}assets/site.css"><link rel="stylesheet" href="{pre}assets/sayana-theme.css">
+<link rel="stylesheet" href="{pre}assets/site.css"><link rel="stylesheet" href="{pre}assets/sayana-theme.css"><link rel="stylesheet" href="{pre}assets/executive-motion.css">
 <meta property="og:type" content="profile"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(descr)}"><meta property="og:image" content="https://newgentle.github.io/photo.webp"><meta property="og:url" content="{canonical}">
 <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Person","name":d["name"],"jobTitle":"Head of IT Department","url":canonical,"image":"https://newgentle.github.io/photo.webp","sameAs":[d["github"],d["linkedin"]]},ensure_ascii=False)}</script>
 <script src="{pre}assets/site.js" defer></script></head><body>
@@ -38,8 +38,7 @@ def build(d):
 <nav id="site-nav" class="links" aria-label="{"Навигация" if ru else "Main navigation"}" data-nav="true" data-open="false">{navlink("about","about")}{navlink("experience","experience")}{navlink("expertise","expertise")}{navlink("contact","contact")}</nav>
 <div class="nav-actions"><a class="lang" href="{alternate}" hreflang="{"en" if ru else "ru"}">{"EN" if ru else "RU"}</a><a class="cta" href="{printview}">{e(nav["resume"])} ↗</a></div><button type="button" class="menu-button" aria-expanded="false" aria-controls="site-nav" aria-label="{e(nav["openMenu"])}" data-menu-button>☰</button></div></header>
 <main id="main">
-<section class="hero" id="top" aria-labelledby="hero-title"><div class="wrap hero-grid"><div><p class="eyebrow">{e(hero["eyebrow"])}</p><p class="hero-name">{e(d["name"])}</p>
-<h1 id="hero-title">{e(hero["lead"])}<br><em>{e(hero["accent"])}</em></h1><p class="hero-description">{e(hero["description"])}</p>
+<section class="hero" id="top" aria-labelledby="hero-title"><div class="hero-mesh" aria-hidden="true"></div><div class="wrap hero-grid"><div><p class="eyebrow">{e(hero["eyebrow"])}</p><h1 id="hero-title" class="hero-identity">{e(d["name"])}</h1><p class="hero-role">{e(hero["lead"])} <span class="hero-role-accent">{e(hero["accent"])}</span></p><p class="hero-description">{e(hero["description"])}</p>
 <div class="actions"><a class="btn btn-primary" href="#experience">{e(nav["experience"])} ↗</a><a class="btn btn-secondary" href="{printview}">{e(hero["secondary"])} ↗</a></div><div class="meta-line"><span>{e(hero["location"])}</span><span>{e(hero["current"])}</span></div></div>
 <figure class="portrait"><img src="{portrait}" alt="{e(hero["photoAlt"])}" width="330" height="413" fetchpriority="high"><figcaption>{e(hero["photoLabel"])}</figcaption></figure>
 </div></section>

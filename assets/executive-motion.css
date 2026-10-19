@@ -1,0 +1,35 @@
+
+/* Executive engineering direction, inspired by functional hierarchy rather than copied art. */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 73% 44%,#32251f 0%,#1d1818 43%,#171719 100%);color:#f8efe6}
+.hero .hero-grid{position:relative;z-index:2;min-height:610px}
+.hero-identity{font-size:clamp(48px,5.8vw,83px)!important;line-height:1.03!important;letter-spacing:-.065em!important;color:#F8EFE6!important;margin:0 0 19px!important;max-width:670px}
+.hero-role{font-size:clamp(15px,1.3vw,18px);line-height:1.7;color:#58B8AE;font-weight:600;letter-spacing:.012em;margin:0 0 22px;max-width:670px}
+.hero-role-accent{color:#D9A08C}
+.hero .eyebrow{display:inline-block;border:1px solid rgba(88,184,174,.3);background:rgba(88,184,174,.065);padding:8px 15px;border-radius:99px;color:#8bd4c9;font-size:10px;letter-spacing:.115em}
+.hero .hero-description{font-size:17px;line-height:1.75;color:#d1c1b5;max-width:570px}
+.hero .btn-primary{background:#B5523A;color:white}
+.hero .btn-secondary{border:1px solid #886657;color:#f8efe6}
+.hero .meta-line{color:#ae9485}
+.hero .meta-line span+span:before{color:#58B8AE}
+.hero .portrait{width:min(340px,100%);justify-self:center}
+.hero .portrait img{aspect-ratio:4/5.2;border-radius:18px;box-shadow:0 25px 60px rgba(0,0,0,.35);filter:saturate(.84)}
+.hero .portrait:before{border:2px solid rgba(181,82,58,.76);border-radius:22px;inset:-12px -13px 22px 18px;transform:rotate(0)}
+.hero .portrait figcaption{color:#c3a999}
+.hero-mesh{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;opacity:.52;background-image:radial-gradient(circle,rgba(88,184,174,.8) 0 1.6px,transparent 2px),radial-gradient(circle,rgba(181,82,58,.65) 0 1.6px,transparent 2px),linear-gradient(130deg,transparent 39.8%,rgba(88,184,174,.065) 40%,transparent 40.2%),linear-gradient(48deg,transparent 54.8%,rgba(181,82,58,.06) 55%,transparent 55.2%);background-size:228px 180px,277px 245px,360px 310px,430px 440px;background-position:34px 19px,170px 90px,0 0,60px 20px;animation:meshDrift 27s ease-in-out infinite alternate}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(23,23,25,.43),transparent 52%);z-index:1}
+@keyframes meshDrift{from{transform:translate3d(-12px,0,0);opacity:.32}to{transform:translate3d(14px,-16px,0);opacity:.58}}
+@keyframes enterSoft{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.hero-grid>div:first-child>*{animation:enterSoft .72s cubic-bezier(.22,1,.36,1) both}
+.hero-grid>div:first-child>:nth-child(2){animation-delay:.07s}
+.hero-grid>div:first-child>:nth-child(3){animation-delay:.14s}
+.hero-grid>div:first-child>:nth-child(4){animation-delay:.21s}
+.hero-grid>div:first-child>:nth-child(5){animation-delay:.29s}
+.hero .portrait{animation:enterSoft .85s .13s both}
+.site-header{background:#fcf8f4}
+.nav-actions .cta{background:#3e2a1f}
+.proof{background:#fff;box-shadow:0 12px 32px rgba(62,42,31,.055)}
+.principle,.skill{box-shadow:none}
+@media(max-width:800px){.hero .hero-grid{min-height:0;padding-top:64px;padding-bottom:68px}.hero-identity{font-size:clamp(42px,9.3vw,61px)!important}.hero-role{font-size:15px}.hero .portrait{width:min(270px,80%)}}
+@media(max-width:480px){.hero-identity{font-size:43px!important}.hero .eyebrow{letter-spacing:.045em;font-size:9px}.hero .hero-grid{padding-top:48px}.hero .hero-description{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.hero-mesh,.hero .portrait,.hero-grid>div:first-child>*{animation:none!important}}
+@media print{.hero,.hero-identity{background:white!important;color:#171719!important}.hero-role,.hero-role-accent{color:#3e2a1f!important}.hero-mesh,.hero:after{display:none!important}}
