@@ -1,0 +1,430 @@
+{
+  "lang": "en",
+  "locale": "en_US",
+  "name": "Akbar Abdullaev",
+  "email": "abdullaev.akbar@gmail.com",
+  "phone": "+998 99 210 09 35",
+  "telephone": "+998992100935",
+  "linkedin": "https://www.linkedin.com/in/akbar-abdullaev-b7697072/",
+  "github": "https://github.com/newGentle",
+  "telegram": "https://t.me/Newgentle",
+  "company": "AkfaMedline–VohaMedline",
+  "meta": {
+    "title": "Akbar Abdullaev — Head of IT | IT Leadership, Infrastructure & Digital Systems",
+    "description": "Akbar Abdullaev — Head of IT, 20+ years across enterprise IT, infrastructure, systems integration, automation and digital product delivery."
+  },
+  "nav": {
+    "about": "Approach",
+    "work": "Selected work",
+    "experience": "Experience",
+    "expertise": "Expertise",
+    "contact": "Contact",
+    "resume": "CV for recruiters",
+    "openMenu": "Open navigation",
+    "download": "View / Print CV"
+  },
+  "hero": {
+    "eyebrow": "HEAD OF IT · TECHNOLOGY LEADERSHIP",
+    "lead": "Leading IT operations.",
+    "accent": "Building systems that work.",
+    "description": "I connect infrastructure, people and software into reliable technology operations — from architecture and business requirements to controlled delivery.",
+    "location": "Uzbekistan",
+    "current": "Head of IT · Since April 2024",
+    "primary": "Explore work",
+    "secondary": "Recruiter CV",
+    "photoLabel": "Leadership grounded in engineering",
+    "photoAlt": "Portrait of Akbar Abdullaev"
+  },
+  "proof": [
+    {
+      "value": "20+",
+      "label": "years of IT experience",
+      "detail": "engineering to leadership"
+    },
+    {
+      "value": "IT",
+      "label": "operations & reliability",
+      "detail": "networks · services · monitoring"
+    },
+    {
+      "value": "Build",
+      "label": "integration & automation",
+      "detail": "requirements to deployment"
+    }
+  ],
+  "section": {
+    "about": "01 / HOW I WORK",
+    "work": "02 / SELECTED WORK",
+    "experience": "03 / CAREER",
+    "expertise": "04 / SKILLS",
+    "qualifications": "05 / QUALIFICATIONS",
+    "contact": "06 / CONTACT"
+  },
+  "about": {
+    "title": "Broad IT leadership. Hands-on technical judgment.",
+    "intro": "Since April 2024 I have led IT operations at AkfaMedline–VohaMedline. My background spans support, networks, databases, software delivery and infrastructure engineering. I turn operational requirements into pragmatic projects while keeping production services dependable.",
+    "cards": [
+      {
+        "num": "01",
+        "title": "Run",
+        "eyebrow": "OPERATIONS & CONTINUITY",
+        "text": "Own day-to-day IT service delivery, diagnose incidents and prioritize resilient infrastructure."
+      },
+      {
+        "num": "02",
+        "title": "Connect",
+        "eyebrow": "ARCHITECTURE & INTEGRATION",
+        "text": "Translate workflows into interfaces, data contracts and coordinated system changes."
+      },
+      {
+        "num": "03",
+        "title": "Deliver",
+        "eyebrow": "PRODUCTS & PEOPLE",
+        "text": "Align stakeholders, set acceptance criteria and guide changes from concept through validation."
+      }
+    ],
+    "note": "My current industry is healthcare, but the expertise is cross-sector: operating systems, enterprise IT and digital transformation."
+  },
+  "work": {
+    "title": "Selected systems, with delivery status.",
+    "intro": "A selection of real initiatives. Contributions and current states are stated conservatively; illustrations are conceptual, not screenshots of production systems.",
+    "caseLabel": "CASE STUDY",
+    "challenge": "Challenge",
+    "action": "My contribution",
+    "outcome": "Evidence / status",
+    "diagramLabel": "CONCEPTUAL SYSTEM VIEW · NOT A PRODUCT SCREENSHOT",
+    "tagsLabel": "Skills demonstrated",
+    "coming": "In progress",
+    "otherHeading": "Current engineering initiatives"
+  },
+  "projects": [
+    {
+      "id": "sayana",
+      "no": "01",
+      "featured": true,
+      "category": "Digital operations · Systems integration",
+      "title": "SAYANA — internal management platform",
+      "status": "Selected modules operational",
+      "statusKind": "operational",
+      "challenge": "Connect administrative workflows, management reporting and financial operations through interoperable services.",
+      "action": "Define product direction and acceptance criteria; coordinate integrations, validation, staged delivery and reporting behavior.",
+      "outcome": "Director reporting and Cash workflows have working deployments. Other modules remain under active development. Financial figures and business records are not disclosed.",
+      "chips": [
+        "Platform architecture",
+        "Reporting",
+        "Workflow design"
+      ],
+      "diagram": [
+        "Business processes",
+        "Data integration",
+        "Management reporting"
+      ]
+    },
+    {
+      "id": "hr",
+      "no": "02",
+      "featured": true,
+      "category": "HR systems · Integration",
+      "title": "Workforce & attendance automation",
+      "status": "In use",
+      "statusKind": "operational",
+      "challenge": "Make workforce records, biometric attendance events, schedules and exception handling work together.",
+      "action": "Coordinate requirements, investigate real incidents and guide controlled updates to HR and attendance workflows.",
+      "outcome": "Operational workflows in use; improvements and edge-case handling continue iteratively.",
+      "chips": [
+        "FaceID",
+        "API integration",
+        "HR workflows"
+      ],
+      "diagram": [
+        "Attendance events",
+        "Business rules",
+        "HR records"
+      ]
+    },
+    {
+      "id": "observability",
+      "no": "03",
+      "featured": true,
+      "category": "Enterprise infrastructure · Reliability",
+      "title": "Network operations & observability",
+      "status": "Operational practice",
+      "statusKind": "operational",
+      "challenge": "Keep multi-system infrastructure diagnosable and reliable while resolving network and service incidents.",
+      "action": "Lead diagnosis across enterprise networking, traffic flows and services; refine Zabbix/Grafana monitoring and actionable telemetry.",
+      "outcome": "Monitoring and incident response are part of ongoing operations. No unverified uptime or reduction metrics are claimed.",
+      "chips": [
+        "Aruba networking",
+        "Zabbix / Grafana",
+        "Incident response"
+      ],
+      "diagram": [
+        "Network & systems",
+        "Metrics / events",
+        "Diagnosis"
+      ]
+    },
+    {
+      "id": "forge",
+      "no": "04",
+      "featured": false,
+      "category": "AI-assisted engineering · Tooling",
+      "title": "ForgeMCP SAYANA",
+      "status": "Controlled pilot",
+      "statusKind": "development",
+      "challenge": "Give development workflows a bounded, auditable bridge to engineering tools.",
+      "action": "Shape architecture, workspace scoping, tests and acceptance checkpoints across successive prototypes.",
+      "outcome": "In development and validation; not a publicly released product.",
+      "chips": [
+        "MCP",
+        "Engineering automation",
+        "Testing"
+      ],
+      "diagram": []
+    },
+    {
+      "id": "mobile",
+      "no": "05",
+      "featured": false,
+      "category": "Product design · Mobile",
+      "title": "Mobile Portal",
+      "status": "In development",
+      "statusKind": "development",
+      "challenge": "Create a mobile-first experience connected to existing services without uncontrolled duplication of sensitive data.",
+      "action": "Specify user flows, review integration contracts and perform UX acceptance in staged iterations.",
+      "outcome": "Development-stage project; production rollout is not claimed.",
+      "chips": [
+        "Mobile UX",
+        "API contracts",
+        "Product scope"
+      ],
+      "diagram": []
+    }
+  ],
+  "experience": {
+    "title": "From engineering to IT leadership.",
+    "summary": "The most recent positions are prioritized; earlier work is retained as a concise timeline.",
+    "roleLabel": "Role",
+    "older": "Earlier roles · 1999–2013",
+    "expand": "Expand early career history",
+    "jobs": [
+      {
+        "period": "Apr 2024 — Present",
+        "company": "AkfaMedline–VohaMedline",
+        "role": "Head of IT Department",
+        "bullets": [
+          "Direct IT operations and continuity of critical services for a private medical organization.",
+          "Coordinate modernization of administrative, workforce and management-reporting processes.",
+          "Oversee enterprise networking, endpoint services, monitoring and infrastructure incident response.",
+          "Translate departmental needs into scoped technical tasks, acceptance criteria and staged releases."
+        ],
+        "highlight": "Current scope: leadership, infrastructure, integration and operational delivery."
+      },
+      {
+        "period": "Aug 2019 — Mar 2024",
+        "company": "PROEKTPRO LLC",
+        "role": "3D Modeler & IT Specialist",
+        "bullets": [
+          "Produced architectural models and visualizations to support client-facing design work.",
+          "Maintained office systems, network connectivity and workplace technology."
+        ]
+      },
+      {
+        "period": "Sep 2018 — Mar 2019",
+        "company": "Me'mor Architecture Service",
+        "role": "IT Specialist",
+        "bullets": [
+          "Administered internal networks, website services and everyday workplace support."
+        ]
+      },
+      {
+        "period": "Jan 2013 — Apr 2017",
+        "company": "Independent",
+        "role": "Freelance Web Developer & Database Administrator",
+        "bullets": [
+          "Developed client web interfaces and worked with relational databases.",
+          "Handled maintenance, bug fixes and integrity-oriented enhancements."
+        ]
+      }
+    ],
+    "early": [
+      [
+        "Oct 2012 — Jan 2013",
+        "MONBLAN LLC",
+        "IT Engineer"
+      ],
+      [
+        "Jan 2009 — Apr 2012",
+        "Independent",
+        "Freelance IT services"
+      ],
+      [
+        "Mar 2009 — Dec 2009",
+        "VIA Karavan Studio",
+        "Technical Director"
+      ],
+      [
+        "Apr 2007 — Jan 2009",
+        "Alfitextile",
+        "Technical Director"
+      ],
+      [
+        "Jan 2007 — Apr 2007",
+        "Zarafshan Trans",
+        "Technical Operator"
+      ],
+      [
+        "Oct 2005 — Dec 2006",
+        "Socio-Economic College",
+        "IT Specialist"
+      ],
+      [
+        "Mar 2005 — Sep 2005",
+        "Yuldosh Co., Uzbekistan Railways",
+        "Technical Operator"
+      ],
+      [
+        "Nov 2004 — Mar 2005",
+        "IATP, IREX USA",
+        "IT Training Volunteer"
+      ],
+      [
+        "Jan 2000 — Oct 2000",
+        "OAZIS Private Firm",
+        "Senior IT Support Specialist"
+      ],
+      [
+        "Oct 1999 — Jan 2000",
+        "Surkhandarya Railway Directorate",
+        "Engineer, Automatic Systems"
+      ]
+    ]
+  },
+  "expertise": {
+    "title": "A toolkit across management and engineering.",
+    "groups": [
+      {
+        "label": "IT leadership & delivery",
+        "items": [
+          "IT operations",
+          "Technology planning",
+          "Vendor coordination",
+          "Requirements & acceptance",
+          "Change control",
+          "Cross-functional delivery"
+        ]
+      },
+      {
+        "label": "Infrastructure & security",
+        "items": [
+          "Windows Server / Active Directory",
+          "Linux / Docker / Nginx",
+          "Enterprise networking / Aruba",
+          "VPN & VoIP",
+          "Incident diagnosis",
+          "Zabbix / Grafana"
+        ]
+      },
+      {
+        "label": "Software & integration",
+        "items": [
+          "Python / FastAPI",
+          "Django / Flask",
+          "REST APIs",
+          "SQL / PostgreSQL / MySQL",
+          "JavaScript / React",
+          "Git & GitHub"
+        ]
+      },
+      {
+        "label": "Applied automation",
+        "items": [
+          "Management reporting",
+          "Attendance integration",
+          "Workflow automation",
+          "AI-assisted engineering",
+          "Test acceptance",
+          "Operational analytics"
+        ]
+      }
+    ]
+  },
+  "qualifications": {
+    "title": "Training and languages.",
+    "trainingTitle": "Professional training",
+    "educationTitle": "Education",
+    "education": "Tashkent Higher Military Border School — studies not completed (2004).",
+    "languagesTitle": "Languages",
+    "training": [
+      [
+        "Python Full Stack Web Developer",
+        "SkillFactory · 2023"
+      ],
+      [
+        "Website Administration",
+        "LAUR Training Center · 2005"
+      ],
+      [
+        "IBM PC Maintenance",
+        "LAUR Training Center · 2004"
+      ],
+      [
+        "3Ds Max Graphic Design",
+        "LAUR Training Center · 2004"
+      ],
+      [
+        "PC Operator",
+        "Istiqlol Business School · 1999"
+      ]
+    ],
+    "languages": [
+      [
+        "Uzbek",
+        "Native"
+      ],
+      [
+        "Russian",
+        "Fluent"
+      ],
+      [
+        "English",
+        "B1"
+      ],
+      [
+        "Turkish",
+        "B1"
+      ],
+      [
+        "Farsi",
+        "B1"
+      ]
+    ]
+  },
+  "contact": {
+    "title": "Let's solve complex IT challenges.",
+    "intro": "Discuss IT leadership, infrastructure modernization, systems integration and pragmatic automation.",
+    "write": "Email",
+    "call": "Phone",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "availability": "Based in Uzbekistan · Open to professional conversations"
+  },
+  "resume": {
+    "label": "ATS-FRIENDLY CV",
+    "role": "Head of IT Department · IT Leadership & Systems Integration",
+    "summaryTitle": "Professional summary",
+    "summary": "IT leader with 20+ years across infrastructure, enterprise systems, networking and software-oriented integration. Since April 2024, Head of IT at AkfaMedline–VohaMedline. Combines service reliability, incident response, cross-functional requirements and the delivery of internal digital workflows.",
+    "strengthsTitle": "Core competencies",
+    "workTitle": "Selected initiatives",
+    "experienceTitle": "Professional experience",
+    "educationTitle": "Education & training",
+    "languagesTitle": "Languages",
+    "earlyTitle": "Earlier roles",
+    "print": "Print / Save as PDF",
+    "web": "Portfolio website",
+    "notice": "Straightforward, single-column layout for recruiter review and PDF export. Project descriptions are factual and exclude private infrastructure details.",
+    "footer": "Reference details and project evidence can be discussed directly."
+  },
+  "footer": "Professional portfolio · Built for clarity"
+}
