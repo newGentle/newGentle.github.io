@@ -1,68 +1,247 @@
+"""Build the EN/RU executive CV pages and recruiter-oriented print views.
+
+Source content: site/content/en.json and site/content/ru.json.
+Rendering is intentionally dependency-free for GitHub Pages.
+"""
 from pathlib import Path
-from html import escape as esc
+from html import escape as html_escape
 import json
-ROOT=Path(r"C:\Users\Public\newgentle-cv-pr-20261019")
-def e(v):return esc(str(v),quote=True)
-def rowlist(rows,fmt):return "\n".join(fmt(x) for x in rows)
-def build(d):
- ru=d["lang"]=="ru"; pre="../" if ru else ""; lang=d["lang"]; nav=d["nav"]; hero=d["hero"]; sec=d["section"]; work=d["work"]; ab=d["about"]; ex=d["experience"]; qual=d["qualifications"]; ct=d["contact"]
- alternate="../" if ru else "ru/"
- home="../" if ru else "./"
- def navlink(k,ref):return f'<a href="#{ref}">{e(nav[k])}</a>'
- def proof(p):return f'<div class="proof-item"><strong>{e(p["value"])}</strong><span>{e(p["label"])}</span><small>{e(p["detail"])}</small></div>'
- def principle(p):return f'<article class="principle"><span class="number">{e(p["num"])}</span><p class="label">{e(p["eyebrow"])}</p><h3>{e(p["title"])}</h3><p>{e(p["text"])}</p></article>'
- def case(p):
-  diagram="" if not p["diagram"] else f'<div class="case-diagram"><p class="case-diagram-label">{e(work["diagramLabel"])}</p><div class="diagram-flow">'+'<span class="diagram-arrow" aria-hidden="true">→</span>'.join(f'<div class="diagram-node">{e(t)}</div>' for t in p["diagram"])+'</div></div>'
-  facts=''.join(f'<div class="fact"><dt>{e(work[k])}</dt><dd>{e(p[k])}</dd></div>' for k in ("challenge","action","outcome"))
-  tags=''.join(f'<span>{e(t)}</span>' for t in p["chips"])
-  return f'<article class="case {"case-wide" if p["featured"] else ""}" id="case-{e(p["id"])}"><div class="case-head"><div class="case-top"><span class="case-index">{e(work["caseLabel"])} / {e(p["no"])}</span><span class="status {"status-operational" if p["statusKind"]=="operational" else ""}">{e(p["status"])}</span></div><p class="case-kind">{e(p["category"])}</p><h3>{e(p["title"])}</h3></div><div class="case-main"><dl class="case-info">{facts}</dl>{diagram}</div><div class="case-tags">{tags}</div></article>'
- def job(j):
-  return f'<article class="job"><div><div class="job-date">{e(j["period"])}</div><div class="job-company">{e(j["company"])}</div></div><div><h3>{e(j["role"])}</h3><ul>{"".join("<li>"+e(t)+"</li>" for t in j["bullets"])}</ul>{("<p class=\"job-spot\">"+e(j["highlight"])+"</p>") if j.get("highlight") else ""}</div></article>'
- def expertise(g):return f'<article class="skill"><h3>{e(g["label"])}</h3><ul>{"".join("<li>"+e(t)+"</li>" for t in g["items"])}</ul></article>'
- def qr(pair):return f'<div class="qual-row"><strong>{e(pair[0])}</strong><span>{e(pair[1])}</span></div>'
- def early(t):return f'<div class="older-row"><div><b>{e(t[2])}</b><div>{e(t[1])}</div></div><span>{e(t[0])}</span></div>'
- title=d["meta"]["title"];descr=d["meta"]["description"];canonical="https://newgentle.github.io/"+("ru/" if ru else "");alternate_url="https://newgentle.github.io/"+("" if ru else "ru/");portrait=pre+"photo.webp"
- mark=""
- printview=("ru/resume/" if not ru else "resume/")
- html=f'''<!doctype html>
-<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(title)}</title><meta name="description" content="{e(descr)}"><meta name="theme-color" content="#0b1d2b">
-<link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="en" href="https://newgentle.github.io/"><link rel="alternate" hreflang="ru" href="https://newgentle.github.io/ru/">
-<link rel="stylesheet" href="{pre}assets/site.css"><link rel="stylesheet" href="{pre}assets/sayana-theme.css"><link rel="stylesheet" href="{pre}assets/executive-motion.css">
-<meta property="og:type" content="profile"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(descr)}"><meta property="og:image" content="https://newgentle.github.io/photo.webp"><meta property="og:url" content="{canonical}">
-<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Person","name":d["name"],"jobTitle":"Head of IT Department","url":canonical,"image":"https://newgentle.github.io/photo.webp","sameAs":[d["github"],d["linkedin"]]},ensure_ascii=False)}</script>
-<script src="{pre}assets/site.js" defer></script></head><body>
-<a class="skip" href="#main">{"Перейти к содержанию" if ru else "Skip to content"}</a>
-<header class="site-header"><div class="wrap nav">
-<a class="logo" href="{home}" aria-label="{e(d["name"])}"><span class="brand">{e(d["name"])}<small>Head of IT · Systems integration</small></span></a>
-<nav id="site-nav" class="links" aria-label="{"Навигация" if ru else "Main navigation"}" data-nav="true" data-open="false">{navlink("about","about")}{navlink("experience","experience")}{navlink("expertise","expertise")}{navlink("contact","contact")}</nav>
-<div class="nav-actions"><a class="lang" href="{alternate}" hreflang="{"en" if ru else "ru"}">{"EN" if ru else "RU"}</a><a class="cta" href="{printview}">{e(nav["resume"])} ↗</a></div><button type="button" class="menu-button" aria-expanded="false" aria-controls="site-nav" aria-label="{e(nav["openMenu"])}" data-menu-button>☰</button></div></header>
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "site" / "content"
+
+def e(value):
+    return html_escape(str(value), quote=True)
+
+def concat(items):
+    return "\n".join(items)
+
+def meta_html(data, ru):
+    lang = data["lang"]
+    path = "ru/" if ru else ""
+    prefix = "../" if ru else ""
+    canonical = f"https://newgentle.github.io/{path}"
+    return f"""<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="{e(data['meta']['description'])}">
+<meta name="theme-color" content="#171616">
+<title>{e(data['meta']['title'])}</title>
+<link rel="canonical" href="{canonical}">
+<link rel="alternate" hreflang="en" href="https://newgentle.github.io/">
+<link rel="alternate" hreflang="ru" href="https://newgentle.github.io/ru/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{e(data['meta']['title'])}">
+<meta property="og:description" content="{e(data['meta']['description'])}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:image" content="https://newgentle.github.io/photo.webp">
+<link rel="stylesheet" href="{prefix}assets/site.css">
+<script src="{prefix}assets/site.js" defer></script>
+<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Person","name":data["name"],"jobTitle":"Head of IT Department","url":canonical,"image":"https://newgentle.github.io/photo.webp","sameAs":[data["github"],data["linkedin"]]},ensure_ascii=False)}</script>"""
+
+def nav_html(data, ru):
+    nav = data["nav"]
+    return concat(f'<a class="nav-link" href="#{key}">{e((nav.get(title) or data["qualifications"]["title"]))}</a>' for key, title in [("about","about"),("experience","experience"),("expertise","expertise"),("qualifications","qualifications"),("contact","contact")])
+
+def hero_html(data, ru):
+    h = data["hero"]
+    p = "../" if ru else ""
+    return f"""<section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-ambient" aria-hidden="true"></div>
+    <div class="wrap hero-layout">
+      <div class="hero-copy" data-reveal>
+        <p class="hero-eyebrow"><span class="signal" aria-hidden="true"></span>{e(h['eyebrow'])}</p>
+        <h1 id="hero-title">{e(data['name'])}</h1>
+        <p class="hero-role"><strong>{e(h['lead'])}</strong><span>{e(h['accent'])}</span></p>
+        <p class="hero-intro">{e(h['description'])}</p>
+        <div class="hero-actions">
+          <a class="action-primary" href="#experience">{e(data['nav']['experience'])}<span aria-hidden="true">↗</span></a>
+          <a class="action-secondary" href="resume/">{e(data['nav']['resume'])}<span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="hero-meta">{e(h['location'])}<span class="meta-sep" aria-hidden="true"></span>{e(h['current'])}</p>
+      </div>
+      <figure class="portrait" data-reveal>
+        <img src="{p}photo.webp" alt="{e(h['photoAlt'])}" width="340" height="430" fetchpriority="high">
+        <figcaption><span class="signal" aria-hidden="true"></span>{e(h['photoLabel'])}</figcaption>
+      </figure>
+    </div>
+    <div class="hero-edge wrap"><span>01 — {e(data['nav']['about'])}</span><span class="scroll-line" aria-hidden="true"></span></div>
+  </section>"""
+
+def highlights_html(data):
+    # Not KPI cards: a single compact typographic band.
+    return f"""<div class="highlights"><div class="wrap highlight-items">
+    {concat(f'<div class="highlight"><strong>{e(item["value"])}</strong><span>{e(item["label"])}</span></div>' for item in data['proof'])}
+  </div></div>"""
+
+def section_head(data, key, title, intro=None):
+    kicker = data["section"][key]
+    note = f'<p class="section-note">{e(intro)}</p>' if intro else ""
+    return f'<div class="section-intro" data-reveal><p class="section-label">{e(kicker)}</p><h2 id="{key}-title">{e(title)}</h2>{note}</div>'
+
+def about_html(data):
+    x = data["about"]
+    values = concat(
+        f'<li class="principle" data-reveal><span class="principle-number">{e(p["num"])}</span><div><span class="principle-tag">{e(p["eyebrow"])}</span><h3>{e(p["title"])}</h3><p>{e(p["text"])}</p></div></li>'
+        for p in x["cards"]
+    )
+    return f"""<section id="about" class="content-section section-about" aria-labelledby="about-title">
+    <div class="wrap section-layout">
+      {section_head(data,"about",x["title"],x["note"])}
+      <div class="section-detail"><p class="lead-copy" data-reveal>{e(x["intro"])}</p>
+        <ol class="principles">{values}</ol>
+      </div>
+    </div></section>"""
+
+def job_html(job):
+    items = concat(f"<li>{e(v)}</li>" for v in job["bullets"])
+    signal = f'<p class="job-signature">{e(job["highlight"])}</p>' if job.get("highlight") else ""
+    return f"""<article class="job" data-reveal>
+      <div class="job-meta"><time>{e(job['period'])}</time><p>{e(job['company'])}</p></div>
+      <div class="job-main"><h3>{e(job['role'])}</h3><ul>{items}</ul>{signal}</div>
+    </article>"""
+
+def earlier_html(row):
+    date, company, role = row
+    return f'<div class="earlier-row"><time>{e(date)}</time><span>{e(role)}</span><span>{e(company)}</span></div>'
+
+def experience_html(data):
+    x = data["experience"]
+    jobs = concat(job_html(j) for j in x["jobs"])
+    earlier = concat(earlier_html(j) for j in x["early"])
+    return f"""<section id="experience" class="content-section section-experience" aria-labelledby="experience-title">
+      <div class="wrap section-layout">
+        {section_head(data,"experience",x["title"],x["summary"])}
+        <div class="section-detail"><div class="jobs">{jobs}</div>
+          <details class="earlier"><summary>{e(x["older"])} <span aria-hidden="true">＋</span></summary><div class="earlier-list">{earlier}</div></details>
+        </div>
+      </div>
+    </section>"""
+
+def expertise_html(data):
+    x = data["expertise"]
+    groups = concat(
+        f'<div class="skill-group" data-reveal><h3>{e(group["label"])}</h3><ul>{concat(f"<li>{e(item)}</li>" for item in group["items"])}</ul></div>'
+        for group in x["groups"]
+    )
+    return f"""<section id="expertise" class="content-section section-expertise" aria-labelledby="expertise-title">
+      <div class="wrap section-layout">
+        {section_head(data,"expertise",x["title"])}
+        <div class="section-detail"><div class="skill-groups">{groups}</div></div>
+      </div>
+    </section>"""
+
+def qualification_html(data):
+    x = data["qualifications"]
+    training = concat(f'<div class="qualification-row"><span>{e(a)}</span><small>{e(b)}</small></div>' for a,b in x["training"])
+    languages = concat(f'<div class="qualification-row"><span>{e(a)}</span><small>{e(b)}</small></div>' for a,b in x["languages"])
+    return f"""<section id="qualifications" class="content-section section-qualifications" aria-labelledby="qualifications-title">
+      <div class="wrap section-layout">
+        {section_head(data,"qualifications",x["title"])}
+        <div class="section-detail qualification-groups">
+          <div class="qualification-group" data-reveal><h3>{e(x["trainingTitle"])}</h3>{training}
+            <h3 class="education-heading">{e(x["educationTitle"])}</h3><p class="education-note">{e(x["education"])}</p>
+          </div>
+          <div class="qualification-group" data-reveal><h3>{e(x["languagesTitle"])}</h3>{languages}</div>
+        </div>
+      </div>
+    </section>"""
+
+def contact_html(data):
+    x = data["contact"]
+    social = concat(
+        f'<a href="{e(data[key])}" target="_blank" rel="noopener noreferrer">{e(label)} <span aria-hidden="true">↗</span></a>'
+        for key,label in [("linkedin","LinkedIn"),("github","GitHub"),("telegram","Telegram")]
+    )
+    return f"""<section id="contact" class="content-section section-contact" aria-labelledby="contact-title">
+      <div class="wrap section-layout">
+        {section_head(data,"contact",x["title"],x["intro"])}
+        <div class="section-detail contact-detail" data-reveal>
+          <a class="contact-email" href="mailto:{e(data['email'])}">{e(data['email'])}<span aria-hidden="true">↗</span></a>
+          <a class="contact-phone" href="tel:{e(data['telephone'])}">{e(data['phone'])}</a>
+          <nav class="social" aria-label="Social profiles">{social}</nav>
+          <p class="contact-availability"><span class="signal" aria-hidden="true"></span>{e(x["availability"])}</p>
+        </div>
+      </div>
+    </section>"""
+
+def site_html(data):
+    ru = data["lang"]=="ru"
+    prefix = "../" if ru else ""
+    switch = "../" if ru else "ru/"
+    dest = "EN" if ru else "RU"
+    root = "../" if ru else "./"
+    skip = "Перейти к содержимому" if ru else "Skip to content"
+    return f"""<!doctype html>
+<html lang="{e(data['lang'])}">
+<head>
+{meta_html(data,ru)}
+</head>
+<body>
+<a class="skip-link" href="#main">{skip}</a>
+<header class="site-header">
+ <div class="wrap header-inner">
+  <a class="wordmark" href="{root}" aria-label="{e(data['name'])}"><span>{e(data['name'])}</span><small>Head of IT</small></a>
+  <nav class="main-nav" id="main-navigation" aria-label="Main navigation" data-nav>{nav_html(data,ru)}</nav>
+  <div class="header-actions"><a class="language" href="{switch}" hreflang="{('en' if ru else 'ru')}">{dest}</a><a class="resume-link" href="resume/">{e(data['nav']['resume'])} <span aria-hidden="true">↗</span></a></div>
+  <button class="menu-toggle" type="button" aria-label="{e(data['nav']['openMenu'])}" aria-controls="main-navigation" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
+ </div>
+ <div class="progress-track" aria-hidden="true"><div class="progress-line" data-progress></div></div>
+</header>
 <main id="main">
-<section class="hero" id="top" aria-labelledby="hero-title"><div class="hero-mesh" aria-hidden="true"></div><div class="wrap hero-grid"><div><p class="eyebrow">{e(hero["eyebrow"])}</p><h1 id="hero-title" class="hero-identity">{e(d["name"])}</h1><p class="hero-role">{e(hero["lead"])} <span class="hero-role-accent">{e(hero["accent"])}</span></p><p class="hero-description">{e(hero["description"])}</p>
-<div class="actions"><a class="btn btn-primary" href="#experience">{e(nav["experience"])} ↗</a><a class="btn btn-secondary" href="{printview}">{e(hero["secondary"])} ↗</a></div><div class="meta-line"><span>{e(hero["location"])}</span><span>{e(hero["current"])}</span></div></div>
-<figure class="portrait"><img src="{portrait}" alt="{e(hero["photoAlt"])}" width="330" height="413" fetchpriority="high"><figcaption>{e(hero["photoLabel"])}</figcaption></figure>
-</div></section>
-<div class="wrap"><div class="proof" aria-label="{"Фокус" if ru else "Focus"}">{rowlist(d["proof"],proof)}</div></div>
-<section class="section" id="about" aria-labelledby="about-title"><div class="wrap"><p class="kicker">{e(sec["about"])}</p><div class="about-layout"><div><h2 id="about-title">{e(ab["title"])}</h2></div><div><p class="about-text">{e(ab["intro"])}</p><p class="about-note">{e(ab["note"])}</p></div></div><div class="principles">{rowlist(ab["cards"],principle)}</div></div></section>
+{hero_html(data,ru)}
+{highlights_html(data)}
+{about_html(data)}
+{experience_html(data)}
+{expertise_html(data)}
+{qualification_html(data)}
+{contact_html(data)}
+</main>
+<footer class="site-footer"><div class="wrap footer-inner"><span>© 2026 {e(data['name'])}</span><span>{e(data['footer'])}</span></div></footer>
+</body></html>"""
 
-<section class="section" id="experience" aria-labelledby="experience-title"><div class="wrap"><p class="kicker">{e(sec["experience"])}</p><h2 id="experience-title">{e(ex["title"])}</h2><p class="section-intro">{e(ex["summary"])}</p><div class="experience-list">{rowlist(ex["jobs"],job)}</div><details class="older"><summary>{e(ex["older"])} · {e(ex["expand"])}</summary><div class="older-list">{rowlist(ex["early"],early)}</div></details></div></section>
-<section class="section section-soft" id="expertise" aria-labelledby="expertise-title"><div class="wrap"><p class="kicker">{e(sec["expertise"])}</p><h2 id="expertise-title">{e(d["expertise"]["title"])}</h2><div class="skills">{rowlist(d["expertise"]["groups"],expertise)}</div></div></section>
-<section class="section" id="qualifications" aria-labelledby="qualifications-title"><div class="wrap"><p class="kicker">{e(sec["qualifications"])}</p><h2 id="qualifications-title">{e(qual["title"])}</h2><div class="qual-grid"><div><h3>{e(qual["trainingTitle"])}</h3>{rowlist(qual["training"],qr)}<h3>{e(qual["educationTitle"])}</h3><p class="education">{e(qual["education"])}</p></div><div><h3>{e(qual["languagesTitle"])}</h3>{rowlist(qual["languages"],qr)}</div></div></div></section>
-<section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-grid"><div><p class="kicker">{e(sec["contact"])}</p><h2 id="contact-title">{e(ct["title"])}</h2><p>{e(ct["intro"])}</p><p class="contact-note">{e(ct["availability"])}</p></div><div class="contact-links"><a href="mailto:{e(d["email"])}">{e(d["email"])}</a><a href="tel:{e(d["telephone"])}">{e(d["phone"])}</a><div class="social"><a href="{e(d["linkedin"])}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="{e(d["github"])}" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="{e(d["telegram"])}" target="_blank" rel="noopener noreferrer">Telegram ↗</a></div><a class="print-link" href="{printview}">{e(nav["download"])} ↗</a></div></div></section>
-</main><footer class="footer"><div class="wrap"><span>© 2026 {e(d["name"])}</span><span>{e(d["footer"])}</span></div></footer></body></html>'''
- out=ROOT/("ru/index.html" if ru else "index.html");out.write_text(html,encoding="utf-8");print("BUILT",out,len(html))
- resume=d["resume"]
- resume_head=f'<header><h1>{e(d["name"])}</h1><p class="role">{e(resume["role"])}</p><p><a href="mailto:{e(d["email"])}">{e(d["email"])}</a> · <a href="tel:{e(d["telephone"])}">{e(d["phone"])}</a> · Uzbekistan</p><p><a href="{e(d["linkedin"])}">LinkedIn</a> · <a href="{e(d["github"])}">GitHub</a> · <a href="{e(canonical)}">{e(resume["web"])}</a></p></header>'
- def rjob(j):return f'<section class="job"><h3>{e(j["role"])} — {e(j["company"])}</h3><p class="period">{e(j["period"])}</p><ul>{"".join("<li>"+e(t)+"</li>" for t in j["bullets"])}</ul></section>'
- def proj(p):return f'<section class="project"><h3>{e(p["title"])} <span>· {e(p["status"])}</span></h3><p><b>{e(work["action"])}:</b> {e(p["action"])}</p><p><b>{e(work["outcome"])}:</b> {e(p["outcome"])}</p></section>'
- strengths=" · ".join([", ".join(g["items"][:4]) for g in d["expertise"]["groups"]])
- resume_html=f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>{e(d["name"])} · {e(resume["label"])}</title><style>body{{font:15px/1.47 Arial,sans-serif;color:#1c2932;max-width:810px;margin:0 auto;padding:34px 38px}}h1{{font-size:30px;margin:0 0 3px}}h2{{font-size:16px;color:#9A4835;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #b9ced5;padding-bottom:5px;margin:23px 0 11px}}h3{{font-size:14px;margin:12px 0 2px}}p{{margin:5px 0}}header{{border-bottom:2px solid #B5523A;padding-bottom:16px}}a{{color:inherit}}.role{{font-size:16px;font-weight:700;color:#B5523A}}.job,.project{{break-inside:avoid;margin-bottom:12px}}.period,.project span{{color:#6d7d83;font-size:12px}}ul{{margin:7px 0;padding-left:18px}}li{{margin:3px 0}}.toolbar{{background:#F8EFE6;padding:10px;border-radius:8px;margin-bottom:20px;display:flex;justify-content:space-between;gap:10px}}button{{background:#B5523A;color:white;border:0;padding:9px 13px;border-radius:6px;cursor:pointer}}.small{{font-size:12px;color:#52646c}}@page{{size:A4;margin:15mm 16mm}}@media print{{body{{max-width:none;padding:0;font:10.5pt/1.4 Arial,sans-serif}}.toolbar{{display:none}}h1{{font-size:22pt}}h2{{font-size:12pt;margin:14px 0 7px}}h3{{font-size:10.5pt}}.job,.project{{break-inside:avoid}}}}@media(max-width:500px){{body{{padding:22px 18px}}.toolbar{{display:grid}}}}</style></head><body><div class="toolbar"><a href="{("../" if not ru else "../../")}">{e(resume["web"])} ↗</a><button onclick="window.print()">{e(resume["print"])}</button></div>{resume_head}
-<h2>{e(resume["summaryTitle"])}</h2><p>{e(resume["summary"])}</p>
-<h2>{e(resume["strengthsTitle"])}</h2><p>{e(strengths)}</p>
-<h2>{e(resume["experienceTitle"])}</h2>{rowlist(ex["jobs"],rjob)}
+def resume_html(data):
+    # Intentionally simple, single-column ATS/recruiter markup.
+    ru = data["lang"]=="ru"
+    r = data["resume"]; x=data["experience"]; q=data["qualifications"]
+    root = "../../" if ru else "../"
+    jobs = concat(
+        f'<section class="resume-job"><h3>{e(job["role"])} — {e(job["company"])}</h3><p class="period">{e(job["period"])}</p><ul>{concat(f"<li>{e(t)}</li>" for t in job["bullets"])}</ul></section>'
+        for job in x["jobs"]
+    )
+    skills = ", ".join(e(v) for group in data["expertise"]["groups"] for v in group["items"][:4])
+    training = "; ".join(e(a)+" — "+e(b) for a,b in q["training"])
+    langs = "; ".join(e(a)+" — "+e(b) for a,b in q["languages"])
+    return f"""<!doctype html>
+<html lang="{e(data['lang'])}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow"><title>{e(data['name'])} · {e(r["label"])}</title>
+<style>
+:root{{--accent:#B5523A;--ink:#3E2A1F;--muted:#806D61}}
+body{{font:15px/1.5 Arial,sans-serif;color:#222;max-width:790px;margin:0 auto;padding:34px 38px;background:#fff}}
+a{{color:inherit}}h1{{font-size:30px;letter-spacing:-.035em;margin:0 0 2px}}h2{{font-size:15px;letter-spacing:.07em;text-transform:uppercase;border-bottom:1px solid #dac7b7;color:var(--ink);padding-bottom:6px;margin:22px 0 11px}}h3{{font-size:14px;margin:13px 0 2px}}p{{margin:5px 0}}.role{{color:var(--accent);font-size:16px;font-weight:700}}.print-toolbar{{background:#F8EFE6;padding:12px 14px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:center;gap:14px}}button{{background:var(--accent);border:0;padding:9px 12px;color:white;border-radius:5px;cursor:pointer;font-weight:700}}header{{padding-bottom:15px;border-bottom:2px solid var(--accent)}}.resume-job{{break-inside:avoid;margin:0 0 12px}}.period{{color:var(--muted);font-size:12px}}ul{{padding-left:19px;margin:7px 0}}li{{margin:3px 0}}.note{{color:var(--muted);font-size:12px}}@media(max-width:500px){{body{{padding:18px}}.print-toolbar{{display:grid}}}}@page{{size:A4;margin:14mm 16mm}}@media print{{body{{max-width:none;padding:0;font:10.5pt/1.4 Arial,sans-serif}}.print-toolbar{{display:none}}h1{{font-size:22pt}}h2{{font-size:12pt;margin:14px 0 8px}}h3{{font-size:10.5pt}}.resume-job{{break-inside:avoid}}}}
+</style></head><body>
+<div class="print-toolbar"><a href="{root}">{e(r["web"])} ↗</a><button type="button" onclick="window.print()">{e(r["print"])}</button></div>
+<header><h1>{e(data["name"])}</h1><p class="role">{e(r["role"])}</p>
+<p><a href="mailto:{e(data["email"])}">{e(data["email"])}</a> · <a href="tel:{e(data["telephone"])}">{e(data["phone"])}</a> · Uzbekistan</p>
+<p><a href="{e(data["linkedin"])}">LinkedIn</a> · <a href="{e(data["github"])}">GitHub</a></p></header>
+<main><h2>{e(r["summaryTitle"])}</h2><p>{e(r["summary"])}</p>
+<h2>{e(r["strengthsTitle"])}</h2><p>{skills}</p>
+<h2>{e(r["experienceTitle"])}</h2>{jobs}
+<h2>{e(r["educationTitle"])}</h2><p>{e(q["education"])}</p><p>{training}</p>
+<h2>{e(r["languagesTitle"])}</h2><p>{langs}</p>
+<p class="note">{e(r["notice"])}</p></main></body></html>"""
 
-<h2>{e(resume["educationTitle"])}</h2><p>{e(qual["education"])}</p><p>{"; ".join(e(x[0])+" — "+e(x[1]) for x in qual["training"])}</p>
-<h2>{e(resume["languagesTitle"])}</h2><p>{", ".join(e(x[0])+" — "+e(x[1]) for x in qual["languages"])}</p>
-<p class="small">{e(resume["notice"])}</p></body></html>'''
- p=ROOT/("ru/resume/index.html" if ru else "resume/index.html");p.write_text(resume_html,encoding="utf-8");print("BUILT",p,len(resume_html))
-for l in ("en","ru"):build(json.loads((ROOT/"site/content"/(l+".json")).read_text(encoding="utf-8")))
+def build():
+    for lang in ("en","ru"):
+        source = DATA / f"{lang}.json"
+        data = json.loads(source.read_text(encoding="utf-8"))
+        assert data["lang"]==lang
+        assert not data["projects"], "Portfolio work must remain hidden until approved"
+        dest = ROOT / ("ru/index.html" if lang=="ru" else "index.html")
+        out = ROOT / ("ru/resume/index.html" if lang=="ru" else "resume/index.html")
+        dest.write_text(site_html(data), encoding="utf-8")
+        out.write_text(resume_html(data), encoding="utf-8")
+        print(f"BUILT {dest.relative_to(ROOT)} ({dest.stat().st_size} bytes)")
+        print(f"BUILT {out.relative_to(ROOT)} ({out.stat().st_size} bytes)")
+
+if __name__=="__main__":
+    build()

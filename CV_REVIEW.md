@@ -1,19 +1,21 @@
-# Executive CV — Draft PR review
+# Executive CV · unified SAYANA engineering-leader design
 
-**DRAFT ONLY — NO MERGE / PUBLICATION**
+Draft only. No merge, deployment or production changes approved.
 
-## Current review scope (SAYANA-brand revision)
-- The header is text-only: removed the AA icon/monogram; the website no longer links to its prior favicon.
-- Selected Projects/Work section and navigation links are removed from EN and RU pages. Project entries are omitted from EN/RU recruiter resumes. Project material remains recoverable from earlier Git history (commit 820eea7).
-- Visual language references approved SAYANA Brand Tokens v2.2 from `newGentle/clinik_report/director_dashboard/react_app/src/brand/sayana-tokens.css`: Terracotta #B5523A, Cream #F8EFE6, Deep Brown #3E2A1F, Rose Clay #D9A08C. Aura Teal #58B8AE remains a secondary brand accent.
-- Layout retains four sections after introduction: Approach, Experience, Expertise, Qualifications and Contacts.
-- EN/RU pages generated using `site/build.py` from `site/content/*.json`; ATS-focused one-column HTML resumes remain available.
+## Scope of the update
+- Entire portfolio site (not only hero) redesigned to one dark executive/engineering visual system.
+- SAME design across introduction, career timeline, skills, training and languages, contact, and footer.
+- SAYANA palette: Terracotta #B5523A, Rose Clay #D9A08C, Deep Brown #3E2A1F, Aura Teal #58B8AE, Cream #F8EFE6.
+- Soft reveal-on-scroll via IntersectionObserver and light ambient background motion; supports prefers-reduced-motion. Scroll progress and active section affordances. No external JavaScript dependencies.
+- Logos and project section remain absent from both languages and recruiter CVs. Public production references and project metrics are intentionally omitted.
+- Separate single-column recruiter/ATS-oriented CVs remain available in resume/ and ru/resume/.
 
-## Tests
-`python site/build.py`
-`python cv_validate.py` -> PASS all four pages
-Chrome 155 headless EN/RU at widths 1440, 768, 390 and 320 -> no overflow, no JS errors, loaded portrait and working mobile menu, 0 visible project cards.
-Recruiter resume print-to-PDF has been generated for both languages. Visual PDF pagination, full WCAG and Lighthouse are pending.
+## Quality gates
+- Build: python site/build.py.
+- Four-page structure validation: python cv_validate.py.
+- Browser QA: Chrome 155; EN and RU at widths 1440, 768, 390 and 320; no JS errors, no broken anchors, no horizontal overflow; portrait renders; mobile menu opens.
+- Browser screenshots reviewed for EN/RU desktop and mobile.
+- Full Lighthouse, WCAG and print pagination review remain future tasks; do not claim these checks passed.
 
-## Publication gate
-Verify employment data, language/education claims, contact information, and permission to mention internal organizations before approving a future deployment. No merge or publication without explicit approval.
+## Release gate
+Review details of job history, language levels, courses, and public contact fields before publication. Do not merge the Draft PR or publish without separate explicit approval.
