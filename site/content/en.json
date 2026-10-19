@@ -38,18 +38,18 @@
   "proof": [
     {
       "value": "20+",
-      "label": "years of IT experience",
-      "detail": "engineering to leadership"
+      "label": "years in IT",
+      "detail": "technical & leadership experience"
     },
     {
-      "value": "IT",
-      "label": "operations & reliability",
-      "detail": "networks · services · monitoring"
+      "value": "5",
+      "label": "languages · Uzbek, Russian, English, Turkish, Farsi",
+      "detail": "language qualifications"
     },
     {
-      "value": "Build",
-      "label": "integration & automation",
-      "detail": "requirements to deployment"
+      "value": "2023",
+      "label": "Python Full Stack training",
+      "detail": "SkillFactory"
     }
   ],
   "section": {
@@ -110,7 +110,7 @@
         "company": "AkfaMedline–VohaMedline",
         "role": "Head of IT Department",
         "bullets": [
-          "Direct IT operations and continuity of critical services for a private medical organization.",
+          "Lead IT service delivery across workplace systems, corporate networking and business-critical applications in a private healthcare organization.",
           "Coordinate modernization of administrative, workforce and management-reporting processes.",
           "Oversee enterprise networking, endpoint services, monitoring and infrastructure incident response.",
           "Translate departmental needs into scoped technical tasks, acceptance criteria and staged releases."

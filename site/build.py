@@ -33,7 +33,16 @@ def meta_html(data, ru):
 <meta property="og:title" content="{e(data['meta']['title'])}">
 <meta property="og:description" content="{e(data['meta']['description'])}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="https://newgentle.github.io/photo.webp">
+<meta property="og:image" content="https://newgentle.github.io/assets/og-{lang}.png">
+<meta property="og:image:secure_url" content="https://newgentle.github.io/assets/og-{lang}.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{e(data['name'])} — Head of IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(data['meta']['title'])}">
+<meta name="twitter:description" content="{e(data['meta']['description'])}">
+<meta name="twitter:image" content="https://newgentle.github.io/assets/og-{lang}.png">
 <link rel="stylesheet" href="{prefix}assets/site.css">
 <script src="{prefix}assets/site.js" defer></script>
 <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Person","name":data["name"],"jobTitle":"Head of IT Department","url":canonical,"image":"https://newgentle.github.io/photo.webp","sameAs":[data["github"],data["linkedin"]]},ensure_ascii=False)}</script>"""
