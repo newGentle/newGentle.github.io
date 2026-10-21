@@ -24,10 +24,10 @@
     "download": "View / Print CV"
   },
   "hero": {
-    "eyebrow": "HEAD OF IT · TECHNOLOGY LEADERSHIP",
-    "lead": "Head of IT",
-    "accent": "· Infrastructure · Systems Integration · Automation",
-    "description": "I connect infrastructure, people and software into reliable technology operations — from architecture and business requirements to controlled delivery.",
+    "eyebrow": "HEAD OF IT · INFRASTRUCTURE & SYSTEMS",
+    "lead": "Head of IT Department",
+    "accent": " | Engineering leadership",
+    "description": "20+ years in IT across networks, enterprise platforms and systems integration. Leading a five-person IT department supporting approximately 300 employees at a six-storey clinic. From hands-on systems engineering to IT operations leadership.",
     "location": "Uzbekistan",
     "current": "Head of IT · Since April 2024",
     "primary": "Explore work",
@@ -38,18 +38,15 @@
   "proof": [
     {
       "value": "20+",
-      "label": "years in IT",
-      "detail": "Engineering and leadership"
+      "label": "years in IT"
     },
     {
-      "value": "IT Ops",
-      "label": "Infrastructure and reliability",
-      "detail": "Networks, services, monitoring"
+      "value": "4",
+      "label": "direct reports"
     },
     {
-      "value": "Systems",
-      "label": "Integration and automation",
-      "detail": "Architecture and delivery"
+      "value": "~300",
+      "label": "employees supported"
     }
   ],
   "section": {

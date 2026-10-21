@@ -25,7 +25,7 @@ for loc,files in [('en',['index.html','resume/index.html']),('ru',['ru/index.htm
   assert len(p.ids)==len(set(p.ids)),filename
   assert not set(p.anchors).difference(p.ids),(filename,set(p.anchors).difference(p.ids))
   assert p.h1==1,(filename,p.h1)
-  assert all((path.parent/name).is_file() for name in p.resources),(filename,p.resources)
+  assert all((path.parent/name).is_file() for name in p.resources if not name.startswith(('https://','http://'))),(filename,p.resources)
   assert not any(key in path.read_text(encoding='utf-8') for key in ('10.64.0.','10.65.0.','172.27.228.'))
   print('PASS',filename,'resources',len(p.resources),'anchors',len(p.anchors))
  assert len(data['projects'])==0

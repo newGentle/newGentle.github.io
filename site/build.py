@@ -44,7 +44,10 @@ def meta_html(data, ru):
 <meta name="twitter:description" content="{e(data['meta']['description'])}">
 <meta name="twitter:image" content="https://newgentle.github.io/assets/og-{lang}.png">
 <link rel="stylesheet" href="{prefix}assets/site.css">
+<link rel="stylesheet" href="{prefix}assets/reference-direction.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script src="{prefix}assets/site.js" defer></script>
+<script src="{prefix}assets/network-motion.js" defer></script>
 <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Person","name":data["name"],"jobTitle":"Head of IT Department","url":canonical,"image":"https://newgentle.github.io/photo.webp","sameAs":[data["github"],data["linkedin"]]},ensure_ascii=False)}</script>"""
 
 def nav_html(data, ru):
