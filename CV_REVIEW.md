@@ -1,21 +1,23 @@
-# Executive CV · unified SAYANA engineering-leader design
+# Executive CV / engineering-leader redesign - visual QA
 
-Draft only. No merge, deployment or production changes approved.
+Date: 2026-10-21. Status: Draft PR only; not released or merged.
 
-## Scope of the update
-- Entire portfolio site (not only hero) redesigned to one dark executive/engineering visual system.
-- SAME design across introduction, career timeline, skills, training and languages, contact, and footer.
-- SAYANA palette: Terracotta #B5523A, Rose Clay #D9A08C, Deep Brown #3E2A1F, Aura Teal #58B8AE, Cream #F8EFE6.
-- Soft reveal-on-scroll via IntersectionObserver and light ambient background motion; supports prefers-reduced-motion. Scroll progress and active section affordances. No external JavaScript dependencies.
-- Logos and project section remain absent from both languages and recruiter CVs. Public production references and project metrics are intentionally omitted.
-- Separate single-column recruiter/ATS-oriented CVs remain available in resume/ and ru/resume/.
+## Design direction
+- The user-selected suszczynski.dev/#hero is a visual reference only. Globe geometry and rendering are independently implemented.
+- Deep navy background; turquoise technical lines; warm terracotta/orange accents.
+- Canvas 3D projected globe with latitude/longitude grid and illuminated nodes, placed behind the approved portrait.
+- Reduced-motion support; globe pauses when hero is not visible or document is hidden.
+- EN/RU biography, career, expertise, qualifications and contact remain. Projects remain hidden.
+- User-confirmed scale: IT team of five including the user; four direct reports; approximately 300 employees served at one six-storey clinic.
+- No internal network identifiers, patient data or credentials included.
 
-## Quality gates
-- Build: python site/build.py.
-- Four-page structure validation: python cv_validate.py.
-- Browser QA: Chrome 155; EN and RU at widths 1440, 768, 390 and 320; no JS errors, no broken anchors, no horizontal overflow; portrait renders; mobile menu opens.
-- Browser screenshots reviewed for EN/RU desktop and mobile.
-- Full Lighthouse, WCAG and print pagination review remain future tasks; do not claim these checks passed.
+## QA
+- python cv_validate.py: PASS all four pages.
+- Chrome: English/Russian at 1440, 768, 390 and 320 px.
+- No horizontal overflow, JavaScript errors or broken internal anchors; portrait loads; mobile menu works; canvas renders.
+- Browser screenshots: C:/Users/Public/cv-audit-executive-20261021.
+- Recruiter resumes remain separate. Active web assets: assets/style.css, assets/executive-design.css, assets/app.js, assets/executive-globe.js.
+- Formal WCAG audit, career-date verification and publication approval are still pending.
 
 ## Release gate
-Review details of job history, language levels, courses, and public contact fields before publication. Do not merge the Draft PR or publish without separate explicit approval.
+The production gh-pages branch is untouched. Do not merge or publish without explicit user approval.
