@@ -180,39 +180,11 @@ def contact_html(data):
     </section>"""
 
 def site_html(data):
-    ru = data["lang"]=="ru"
-    prefix = "../" if ru else ""
-    switch = "../" if ru else "ru/"
-    dest = "EN" if ru else "RU"
-    root = "../" if ru else "./"
-    skip = "Перейти к содержимому" if ru else "Skip to content"
-    return f"""<!doctype html>
-<html lang="{e(data['lang'])}">
-<head>
-{meta_html(data,ru)}
-</head>
-<body>
-<a class="skip-link" href="#main">{skip}</a>
-<header class="site-header">
- <div class="wrap header-inner">
-  <a class="wordmark" href="{root}" aria-label="{e(data['name'])}"><span>{e(data['name'])}</span><small>Head of IT</small></a>
-  <nav class="main-nav" id="main-navigation" aria-label="Main navigation" data-nav>{nav_html(data,ru)}</nav>
-  <div class="header-actions"><a class="language" href="{switch}" hreflang="{('en' if ru else 'ru')}">{dest}</a><a class="resume-link" href="resume/">{e(data['nav']['resume'])} <span aria-hidden="true">↗</span></a></div>
-  <button class="menu-toggle" type="button" aria-label="{e(data['nav']['openMenu'])}" aria-controls="main-navigation" aria-expanded="false" data-menu-button><span></span><span></span><span></span></button>
- </div>
- <div class="progress-track" aria-hidden="true"><div class="progress-line" data-progress></div></div>
-</header>
-<main id="main">
-{hero_html(data,ru)}
-{highlights_html(data)}
-{about_html(data)}
-{experience_html(data)}
-{expertise_html(data)}
-{qualification_html(data)}
-{contact_html(data)}
-</main>
-<footer class="site-footer"><div class="wrap footer-inner"><span>© 2026 {e(data['name'])}</span><span>{e(data['footer'])}</span></div></footer>
-</body></html>"""
+    """Render reviewed site templates; keep recruiter resume HTML generated."""
+    language = data["lang"]
+    assert language in ("en","ru")
+    template = ROOT / "site" / "templates" / ("approved_" + language + ".html")
+    return template.read_text(encoding="utf-8")
 
 def resume_html(data):
     # Intentionally simple, single-column ATS/recruiter markup.
