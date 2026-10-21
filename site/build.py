@@ -24,7 +24,7 @@ def meta_html(data, ru):
     return f"""<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{e(data['meta']['description'])}">
-<meta name="theme-color" content="#171616">
+<meta name="theme-color" content="#111416">
 <title>{e(data['meta']['title'])}</title>
 <link rel="canonical" href="{canonical}">
 <link rel="alternate" hreflang="en" href="https://newgentle.github.io/">
@@ -45,9 +45,12 @@ def meta_html(data, ru):
 <meta name="twitter:image" content="https://newgentle.github.io/assets/og-{lang}.png">
 <link rel="stylesheet" href="{prefix}assets/site.css">
 <link rel="stylesheet" href="{prefix}assets/reference-direction.css">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{prefix}assets/sayana-executive-override.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="{prefix}assets/site.js" defer></script>
-<script src="{prefix}assets/network-motion.js" defer></script>
+<script src="{prefix}assets/sayana-page-motion.js" defer></script>
 <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Person","name":data["name"],"jobTitle":"Head of IT Department","url":canonical,"image":"https://newgentle.github.io/photo.webp","sameAs":[data["github"],data["linkedin"]]},ensure_ascii=False)}</script>"""
 
 def nav_html(data, ru):
