@@ -1,0 +1,29 @@
+name: CV quality gate
+on:
+  pull_request:
+    branches: [gh-pages]
+  push:
+    branches: [feat/executive-cv-redesign-20261019]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate site
+        run: python cv_validate.py
+      - name: Verify content and PDF links
+        run: python scripts/cv_quality_gate.py
+      - name: Check JS syntax
+        run: |
+          node --check assets/app.js
+          node --check assets/executive-globe.js

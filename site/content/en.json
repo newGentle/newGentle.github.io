@@ -27,7 +27,7 @@
     "eyebrow": "HEAD OF IT · INFRASTRUCTURE & SYSTEMS",
     "lead": "Head of IT Department",
     "accent": " | Engineering leadership",
-    "description": "20+ years in IT across networks, enterprise platforms and systems integration. Leading a five-person IT department supporting approximately 300 employees at a six-storey clinic. From hands-on systems engineering to IT operations leadership.",
+    "description": "I lead IT operations that keep business-critical systems running and make everyday processes easier to manage. With more than 20 years in technology, I currently direct a five-person IT department supporting approximately 300 employees at a six-storey clinic.",
     "location": "Uzbekistan",
     "current": "Head of IT · Since April 2024",
     "primary": "Explore work",
@@ -58,8 +58,8 @@
     "contact": "06 / CONTACT"
   },
   "about": {
-    "title": "Broad IT leadership. Hands-on technical judgment.",
-    "intro": "Since April 2024 I have led IT operations at AkfaMedline–VohaMedline. My background spans support, networks, databases, software delivery and infrastructure engineering. I turn operational requirements into pragmatic projects while keeping production services dependable.",
+    "title": "IT operations that support real business outcomes.",
+    "intro": "My work connects people, systems and infrastructure: organizing service delivery, maintaining core technology and turning operational requirements into manageable system changes. Healthcare is my current environment; enterprise IT leadership is my profession.",
     "cards": [
       {
         "num": "01",
@@ -104,41 +104,71 @@
     "jobs": [
       {
         "period": "Apr 2024 — Present",
-        "company": "AkfaMedline–VohaMedline",
         "role": "Head of IT Department",
+        "company": "AkfaMedline–VohaMedline",
         "bullets": [
-          "Lead IT service delivery across workplace systems, corporate networking and business-critical applications in a private healthcare organization.",
-          "Coordinate modernization of administrative, workforce and management-reporting processes.",
-          "Oversee enterprise networking, endpoint services, monitoring and infrastructure incident response.",
-          "Translate departmental needs into scoped technical tasks, acceptance criteria and staged releases."
+          "Lead an IT department of five people, including four direct reports; support approximately 300 employees in one six-storey clinic.",
+          "Oversee workplace services, enterprise networking, physical and virtual servers, IP telephony, CCTV and business-critical MIS/RIS/LIS/HRM platforms.",
+          "Coordinate incident response, technical requirements, systems integration and staged changes to internal operational workflows.",
+          "Coordinated internal attendance, reporting and workflow-automation initiatives."
         ],
-        "highlight": "Current scope: leadership, infrastructure, integration and operational delivery."
+        "highlight": "5-person IT department · 4 direct reports · approx. 300 employees · 1 six-storey clinic"
       },
       {
         "period": "Aug 2019 — Mar 2024",
-        "company": "PROEKTPRO LLC",
         "role": "3D Modeler & IT Specialist",
+        "company": "PROEKTPRO LLC",
         "bullets": [
-          "Produced architectural models and visualizations to support client-facing design work.",
-          "Maintained office systems, network connectivity and workplace technology."
-        ]
+          "Maintained employee workstations, peripheral equipment, local networking, connectivity and the company website.",
+          "Created architectural 3D models and visualizations as a parallel technical responsibility."
+        ],
+        "highlight": ""
       },
       {
         "period": "Sep 2018 — Mar 2019",
-        "company": "Me'mor Architecture Service",
         "role": "IT Specialist",
+        "company": "Me’mor Architecture Service",
         "bullets": [
-          "Administered internal networks, website services and everyday workplace support."
-        ]
+          "Supported internal networks, end-user workstations and the company website."
+        ],
+        "highlight": ""
       },
       {
         "period": "Jan 2013 — Apr 2017",
-        "company": "Independent",
-        "role": "Freelance Web Developer & Database Administrator",
+        "role": "Independent Web Developer & Database Administrator",
+        "company": "Self-employed",
         "bullets": [
-          "Developed client web interfaces and worked with relational databases.",
-          "Handled maintenance, bug fixes and integrity-oriented enhancements."
-        ]
+          "Developed client websites and web applications, maintained relational databases and delivered ongoing fixes and support.",
+          "Worked with clients on requirements, functional changes and web interface maintenance."
+        ],
+        "highlight": ""
+      },
+      {
+        "period": "Oct 2012 — Jan 2013",
+        "role": "IT Engineer",
+        "company": "MONBLAN LLC",
+        "bullets": [
+          "Supported workstation hardware, operating systems and everyday infrastructure operations."
+        ],
+        "highlight": ""
+      },
+      {
+        "period": "Jan 2009 — Apr 2012",
+        "role": "Independent IT Consulting",
+        "company": "Self-employed",
+        "bullets": [
+          "Provided computer, networking and workplace IT installation, repair and maintenance services."
+        ],
+        "highlight": ""
+      },
+      {
+        "period": "Apr 2007 — Jan 2009",
+        "role": "Technical Director",
+        "company": "Alfitextile",
+        "bullets": [
+          "Managed server and database administration, barcode-scanning systems and company websites."
+        ],
+        "highlight": ""
       }
     ],
     "early": [
@@ -200,45 +230,30 @@
       {
         "label": "IT leadership & delivery",
         "items": [
-          "IT operations",
-          "Technology planning",
-          "Vendor coordination",
-          "Requirements & acceptance",
-          "Change control",
-          "Cross-functional delivery"
+          "Team coordination, IT service operations, cross-functional requirements, technical planning, change review and vendor collaboration."
         ]
       },
       {
-        "label": "Infrastructure & security",
+        "label": "Infrastructure & resilience",
         "items": [
-          "Windows Server / Active Directory",
-          "Linux / Docker / Nginx",
-          "Enterprise networking / Aruba",
-          "VPN & VoIP",
-          "Incident diagnosis",
-          "Zabbix / Grafana"
+          "Corporate networking and Aruba, Windows Server / Active Directory, Linux servers, virtualization, observability with Zabbix and Grafana, incident response."
         ]
       },
       {
-        "label": "Software & integration",
+        "label": "Enterprise systems & integration",
+        "items": [
+          "MIS/RIS/LIS/HRM operations, data flows, access and reporting integrations, API-based workflow automation."
+        ]
+      },
+      {
+        "label": "Hands-on engineering toolkit",
         "items": [
           "Python / FastAPI",
-          "Django / Flask",
-          "REST APIs",
           "SQL / PostgreSQL / MySQL",
-          "JavaScript / React",
-          "Git & GitHub"
-        ]
-      },
-      {
-        "label": "Applied automation",
-        "items": [
-          "Management reporting",
-          "Attendance integration",
-          "Workflow automation",
-          "AI-assisted engineering",
-          "Test acceptance",
-          "Operational analytics"
+          "REST APIs",
+          "Docker / Nginx",
+          "Git / GitHub",
+          "React / JavaScript"
         ]
       }
     ]
@@ -308,7 +323,7 @@
     "label": "ATS-FRIENDLY CV",
     "role": "Head of IT Department · IT Leadership & Systems Integration",
     "summaryTitle": "Professional summary",
-    "summary": "IT leader with 20+ years across infrastructure, enterprise systems, networking and software-oriented integration. Since April 2024, Head of IT at AkfaMedline–VohaMedline. Combines service reliability, incident response, cross-functional requirements and the delivery of internal digital workflows.",
+    "summary": "IT leader with 20+ years of experience across enterprise infrastructure, service operations and systems integration. Since April 2024, I have led a five-person IT department (four direct reports) supporting approximately 300 employees at one six-storey clinic. My scope includes corporate networks, servers, business-critical applications and controlled automation of operational workflows.",
     "strengthsTitle": "Core competencies",
     "workTitle": "Selected initiatives",
     "experienceTitle": "Professional experience",
@@ -320,5 +335,177 @@
     "notice": "Straightforward, single-column layout for recruiter review and PDF export. Project descriptions are factual and exclude private infrastructure details.",
     "footer": "Reference details and project evidence can be discussed directly."
   },
-  "footer": "Professional portfolio · Built for clarity"
+  "footer": "Professional portfolio · Built for clarity",
+  "portfolio": {
+    "hero_intro": "I lead IT operations that keep business-critical systems running and make everyday processes easier to manage. With more than 20 years in technology, I currently direct a five-person IT department supporting approximately 300 employees at a six-storey clinic.",
+    "about_title": "IT operations that support real business outcomes.",
+    "about_intro": "My work connects people, systems and infrastructure: organizing service delivery, maintaining core technology and turning operational requirements into manageable system changes. Healthcare is my current environment; enterprise IT leadership is my profession.",
+    "about_approach": "I combine hands-on engineering judgment with team leadership, incident analysis, clear priorities and cross-functional coordination. The aim is dependable services and useful automation, not technology for its own sake.",
+    "feature": [
+      [
+        "Service ownership",
+        "Coordinate day-to-day IT services, incidents, infrastructure maintenance and technical support."
+      ],
+      [
+        "Architecture & integration",
+        "Connect established systems with new workflows, data access and operational reporting."
+      ],
+      [
+        "Team leadership",
+        "Lead an IT department of five, with four direct reports, serving approximately 300 employees."
+      ],
+      [
+        "Practical automation",
+        "Define, test and introduce internal tools with controlled changes and clear operational value."
+      ]
+    ],
+    "xp_title": "Engineering experience. Leadership responsibility.",
+    "xp_note": "A chronological view of the roles most relevant to IT leadership. Short assignments and early technical work remain available below.",
+    "current": [
+      "Apr 2024 — Present",
+      "Head of IT Department",
+      "AkfaMedline–VohaMedline",
+      [
+        "Lead an IT department of five people, including four direct reports; support approximately 300 employees in one six-storey clinic.",
+        "Oversee workplace services, enterprise networking, physical and virtual servers, IP telephony, CCTV and business-critical MIS/RIS/LIS/HRM platforms.",
+        "Coordinate incident response, technical requirements, systems integration and staged changes to internal operational workflows.",
+        "Coordinated internal attendance, reporting and workflow-automation initiatives."
+      ]
+    ],
+    "projectpro": [
+      "Aug 2019 — Mar 2024",
+      "3D Modeler & IT Specialist",
+      "PROEKTPRO LLC",
+      [
+        "Maintained employee workstations, peripheral equipment, local networking, connectivity and the company website.",
+        "Created architectural 3D models and visualizations as a parallel technical responsibility."
+      ]
+    ],
+    "memor": [
+      "Sep 2018 — Mar 2019",
+      "IT Specialist",
+      "Me’mor Architecture Service",
+      [
+        "Supported internal networks, end-user workstations and the company website."
+      ]
+    ],
+    "independent_web": [
+      "Jan 2013 — Apr 2017",
+      "Independent Web Developer & Database Administrator",
+      "Self-employed",
+      [
+        "Developed client websites and web applications, maintained relational databases and delivered ongoing fixes and support.",
+        "Worked with clients on requirements, functional changes and web interface maintenance."
+      ]
+    ],
+    "monblan": [
+      "Oct 2012 — Jan 2013",
+      "IT Engineer",
+      "MONBLAN LLC",
+      [
+        "Supported workstation hardware, operating systems and everyday infrastructure operations."
+      ]
+    ],
+    "independent_it": [
+      "Jan 2009 — Apr 2012",
+      "Independent IT Consulting",
+      "Self-employed",
+      [
+        "Provided computer, networking and workplace IT installation, repair and maintenance services."
+      ]
+    ],
+    "alfitextile": [
+      "Apr 2007 — Jan 2009",
+      "Technical Director",
+      "Alfitextile",
+      [
+        "Managed server and database administration, barcode-scanning systems and company websites."
+      ]
+    ],
+    "impact_label": "OPERATIONAL SCOPE",
+    "impact_text": "5-person IT department · 4 direct reports · approx. 300 employees · 1 six-storey clinic",
+    "earlier_label": "Earlier engineering and technical roles (1999–2009)",
+    "earlier": [
+      "2009 — Technical Director, VIA Karavan Studio (overlapping independent work)",
+      "2007 — Technical Operator, Zarafshan Trans",
+      "2005–2006 — IT Specialist, Socio-Economic College",
+      "2005 — Technical Operator, Yuldosh Co. / Uzbekistan Railways",
+      "2004–2005 — IT Training Volunteer, IATP / IREX",
+      "2000 — Senior IT Support Specialist, OAZIS",
+      "1999–2000 — Engineer, Automatic Systems, Surkhandarya Railway Directorate"
+    ],
+    "expertise_title": "Leadership and architecture first.",
+    "expertise_intro": "Core responsibilities are differentiated from hands-on programming tools. The technical stack supports operational decisions; it is not a claim of being a full-time specialist in every listed technology.",
+    "primary_skills": [
+      [
+        "IT leadership & delivery",
+        "Team coordination, IT service operations, cross-functional requirements, technical planning, change review and vendor collaboration."
+      ],
+      [
+        "Infrastructure & resilience",
+        "Corporate networking and Aruba, Windows Server / Active Directory, Linux servers, virtualization, observability with Zabbix and Grafana, incident response."
+      ],
+      [
+        "Enterprise systems & integration",
+        "MIS/RIS/LIS/HRM operations, data flows, access and reporting integrations, API-based workflow automation."
+      ]
+    ],
+    "toolbox_title": "Hands-on engineering toolkit",
+    "toolbox_text": "Technologies applied to internal solutions and technical reviews; secondary to leadership responsibilities.",
+    "toolbox_items": [
+      "Python / FastAPI",
+      "SQL / PostgreSQL / MySQL",
+      "REST APIs",
+      "Docker / Nginx",
+      "Git / GitHub",
+      "React / JavaScript"
+    ],
+    "qual_title": "Professional development & languages.",
+    "training_title": "Most relevant recent training",
+    "training_recent": "Python Full Stack Web Developer",
+    "training_year": "SkillFactory · 2023",
+    "older_heading": "Earlier technical courses",
+    "older_courses": [
+      "Website Administration — LAUR Training Center, 2005",
+      "IBM PC Maintenance — LAUR Training Center, 2004",
+      "3Ds Max Graphic Design — LAUR Training Center, 2004",
+      "PC Operator — Istiqlol Business School, 1999"
+    ],
+    "edu_title": "Education",
+    "edu_value": "Tashkent Higher Military Border School — studies not completed (2004).",
+    "lang_title": "Languages",
+    "langs": [
+      [
+        "Uzbek",
+        "Native"
+      ],
+      [
+        "Russian",
+        "Fluent"
+      ],
+      [
+        "English",
+        "B1"
+      ],
+      [
+        "Turkish",
+        "B1"
+      ],
+      [
+        "Farsi",
+        "B1"
+      ]
+    ],
+    "contact_title": "Let’s discuss your IT priorities.",
+    "contact_intro": "For conversations about IT leadership, reliable infrastructure and enterprise systems integration.",
+    "cta_pdf": "Download CV (PDF)",
+    "cta_contact": "Contact",
+    "cta_experience": "Experience",
+    "micro_about": "ABOUT",
+    "micro_experience": "EXPERIENCE",
+    "micro_expertise": "EXPERTISE",
+    "micro_qual": "QUALIFICATIONS",
+    "micro_contact": "CONTACT",
+    "old_resume_note": "Career dates reflect the original CV; employer confirmation is pending."
+  }
 }
