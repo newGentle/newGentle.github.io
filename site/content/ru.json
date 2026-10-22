@@ -3,8 +3,8 @@
   "locale": "ru_RU",
   "name": "Akbar Abdullaev",
   "email": "abdullaev.akbar@gmail.com",
-  "phone": "+998 99 210 09 35",
-  "telephone": "+998992100935",
+  "phone": "+998 77 082 0935",
+  "telephone": "+998770820935",
   "linkedin": "https://www.linkedin.com/in/akbar-abdullaev-b7697072/",
   "github": "https://github.com/newGentle",
   "telegram": "https://t.me/Newgentle",
@@ -507,5 +507,6 @@
     "micro_qual": "КВАЛИФИКАЦИЯ",
     "micro_contact": "КОНТАКТЫ",
     "old_resume_note": "Даты отражают исходное CV; отдельные периоды требуют документальной сверки."
-  }
+  },
+  "whatsapp": "https://wa.me/998770820935"
 }
