@@ -5,3 +5,8 @@
 .hero .actions .btn:hover{filter:brightness(1.16);box-shadow:0 0 0 2px rgba(19,206,234,.3),0 8px 24px rgba(2,146,193,.22);transform:translateY(-2px)}
 .hero .actions .btn:focus-visible{outline:3px solid #f3aa77;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.hero .actions .btn{transition:none}.hero .actions .btn:hover{transform:none}}
+
+/* Personal monogram lockup */
+.brand-lockup{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;text-decoration:none}
+.brand-lockup .brand-icon{width:35px;height:35px;object-fit:contain;flex:none}
+@media(max-width:480px){.brand-lockup .brand-icon{width:29px;height:29px}.brand-lockup{gap:7px}}
