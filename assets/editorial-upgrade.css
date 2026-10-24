@@ -19,3 +19,6 @@
 .brand-lockup .brand-icon{width:49px;height:49px;object-fit:contain;flex:none}
 @media(max-width:880px){.hero-emblem{max-width:480px}.hero-emblem img{max-height:290px}.brand-lockup .brand-icon{width:40px;height:40px}}
 @media(max-width:480px){.hero-emblem{max-width:100%;margin:8px 0 13px}.hero-emblem img{max-height:225px}.brand-lockup .brand-icon{width:36px;height:36px}}
+
+/* Original user-supplied complete brand signature, not reillustrated. */
+.hero-emblem{width:min(100%,565px);margin:0 0 10px}.hero-emblem img{width:100%;height:auto;max-height:420px;object-fit:contain;object-position:left center}@media(max-width:480px){.hero-emblem{width:min(100%,430px)}.hero-emblem img{max-height:320px}}
