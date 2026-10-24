@@ -10,3 +10,12 @@
 .brand-lockup{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;text-decoration:none}
 .brand-lockup .brand-icon{width:35px;height:35px;object-fit:contain;flex:none}
 @media(max-width:480px){.brand-lockup .brand-icon{width:29px;height:29px}.brand-lockup{gap:7px}}
+
+/* 2026-10-24: approved A emblem replaces duplicate hero name and title. */
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.hero-emblem{width:min(100%,590px);margin:13px 0 14px;position:relative;z-index:1;filter:drop-shadow(0 9px 22px rgba(1,149,208,.15))}
+.hero-emblem img{width:100%;height:auto;max-height:330px;object-fit:contain;object-position:left center;display:block}
+.hero-copy .specialty{font-size:clamp(14px,1.35vw,18px);letter-spacing:.04em;line-height:1.45;margin-bottom:18px}
+.brand-lockup .brand-icon{width:49px;height:49px;object-fit:contain;flex:none}
+@media(max-width:880px){.hero-emblem{max-width:480px}.hero-emblem img{max-height:290px}.brand-lockup .brand-icon{width:40px;height:40px}}
+@media(max-width:480px){.hero-emblem{max-width:100%;margin:8px 0 13px}.hero-emblem img{max-height:225px}.brand-lockup .brand-icon{width:36px;height:36px}}

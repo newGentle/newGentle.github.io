@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 760 600" fill="none" role="img" aria-label="Personal monogram A">
+<defs>
+<linearGradient id="silver" x1="130" y1="95" x2="620" y2="570" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="0.3" stop-color="#D7EEFF"/><stop offset="0.69" stop-color="#7BA6D9"/><stop offset="1" stop-color="#D3E7F6"/></linearGradient>
+<linearGradient id="ice" x1="230" y1="70" x2="460" y2="580" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="0.55" stop-color="#E4F5FF"/><stop offset="1" stop-color="#6493BE"/></linearGradient>
+<linearGradient id="azure" x1="560" y1="38" x2="760" y2="580" gradientUnits="userSpaceOnUse"><stop stop-color="#003274"/><stop offset="0.31" stop-color="#056FF3"/><stop offset="0.75" stop-color="#04C6F2"/><stop offset="1" stop-color="#15FFFF"/></linearGradient>
+<linearGradient id="chrome" x1="0" y1="250" x2="800" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#F6FDFF"/><stop offset="0.4" stop-color="#98BCE0"/><stop offset="0.65" stop-color="#f7ffff"/><stop offset="1" stop-color="#29B3E3"/></linearGradient>
+<linearGradient id="midnight" x1="500" y1="60" x2="820" y2="570" gradientUnits="userSpaceOnUse"><stop stop-color="#001F66"/><stop offset="0.55" stop-color="#012354"/><stop offset="1" stop-color="#01205A"/></linearGradient>
+<linearGradient id="pixel" x1="800" y1="300" x2="925" y2="445" gradientUnits="userSpaceOnUse"><stop stop-color="#0C58F7"/><stop offset="1" stop-color="#00E7FF"/></linearGradient>
+<filter id="glow" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="shadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0077E7" flood-opacity=".4"/></filter>
+</defs><rect x="0" y="0" width="760" height="600" rx="78" fill="#061827"/>
+<path d="M435 18L742 558H600L359 144Z" fill="url(#midnight)" stroke="#008DE7" stroke-width="5"/>
+<path d="M435 18L721 558H621L398 81Z" fill="url(#azure)"/>
+<path d="M443 17L748 558H726L418 65Z" fill="#002354" opacity=".85"/>
+<path d="M436 26L625 556H611L422 55Z" fill="#52DDFF" opacity=".9" filter="url(#glow)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M438 15L17 559H218L439 254L510 377L590 365L438 15ZM401 236L321 351H467L401 236Z" fill="url(#silver)" stroke="#CDEBFF" stroke-width="4" filter="url(#shadow)"/>
+<path d="M438 15L17 559H44L445 55Z" fill="#FFFFFF" opacity=".84"/>
+<path d="M442 29L535 275L523 310L423 79Z" fill="#001A47" opacity=".75"/>
+<path d="M17 550C223 405 446 290 634 291C733 289 775 310 824 336C699 314 556 338 411 390C260 440 138 510 70 555Z" fill="url(#chrome)" stroke="#DDF9FF" stroke-width="3" filter="url(#shadow)"/>
+<path d="M28 550C237 400 459 296 635 299C708 302 768 320 803 333" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="7" stroke-linecap="round"/>
+<rect x="804" y="302" width="58" height="58" rx="3" fill="url(#pixel)" stroke="#45EDFF" stroke-width="4" filter="url(#glow)"/>
+<rect x="870" y="243" width="52" height="52" rx="3" fill="url(#pixel)" stroke="#50E4FF" stroke-width="3"/>
+<rect x="873" y="368" width="49" height="49" rx="3" fill="url(#pixel)" stroke="#40E6FF" stroke-width="3"/>
+</svg>
