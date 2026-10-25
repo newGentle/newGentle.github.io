@@ -22,3 +22,20 @@
 
 /* Original user-supplied complete brand signature, not reillustrated. */
 .hero-emblem{width:min(100%,565px);margin:0 0 10px}.hero-emblem img{width:100%;height:auto;max-height:420px;object-fit:contain;object-position:left center}@media(max-width:480px){.hero-emblem{width:min(100%,430px)}.hero-emblem img{max-height:320px}}
+
+/* Reference-aligned centered navigation, sole personal logo in hero. */
+.navin{justify-content:center;gap:22px}
+.navlinks{margin-left:0;gap:clamp(18px,2.4vw,38px)}
+.navlinks a{font-size:clamp(14px,1.02vw,16px)}
+.navact{margin-left:0}
+.hero-copy .hero-emblem{margin-top:0}
+.hero-copy .intro{margin-top:20px}
+@media(max-width:960px){
+ .navin{justify-content:flex-end;gap:14px}
+ .navact{margin-left:0}
+ .menubtn{margin-left:0}
+ .navlinks.open{text-align:center;align-items:center}
+}
+@media(max-width:480px){
+ .hero-copy .intro{margin-top:16px}
+}
