@@ -39,3 +39,9 @@
 @media(max-width:480px){
  .hero-copy .intro{margin-top:16px}
 }
+
+/* Actual source logo, background extracted at 2048 px. */
+.hero-copy .hero-emblem{width:min(100%,565px);margin:0 0 6px}
+.hero-copy .hero-emblem img{max-height:465px;width:100%;height:auto;object-fit:contain;object-position:left center}
+@media(max-width:760px){.hero-copy .hero-emblem{width:min(100%,475px)}.hero-copy .hero-emblem img{max-height:390px}}
+@media(max-width:480px){.hero-copy .hero-emblem{width:min(100%,365px)}.hero-copy .hero-emblem img{max-height:320px}}
